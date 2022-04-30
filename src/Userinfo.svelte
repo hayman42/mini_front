@@ -13,7 +13,7 @@
     let userid, nickname, age, gender;
     onMount(async () => {
         let info = (
-            await axios.get("http://localhost:5000/api/user/info", {
+            await axios.get("https://localhost:5000/api/user/info", {
                 withCredentials: true,
             })
         ).data;
@@ -32,7 +32,8 @@
         }, {});
         console.log(qs.stringify(querys));
         const res = await axios.get(
-            "http://localhost:5000/api/user/update?" + qs.stringify(querys),
+            "https://hayman42intropapp.herokuapp.com/api/user/update?" +
+                qs.stringify(querys),
             { withCredentials: true }
         );
     }
