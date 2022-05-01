@@ -34165,7 +34165,7 @@ var app = (function () {
     			div = element("div");
     			create_component(input.$$.fragment);
     			attr_dev(div, "class", "input-name svelte-1ayj6f9");
-    			add_location(div, file$1, 107, 4, 3455);
+    			add_location(div, file$1, 107, 4, 3467);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -35698,11 +35698,11 @@ var app = (function () {
 
     			t2 = space();
     			attr_dev(div0, "class", "card-username svelte-1ayj6f9");
-    			add_location(div0, file$1, 156, 20, 5066);
+    			add_location(div0, file$1, 156, 20, 5078);
     			attr_dev(div1, "class", "scroll-item svelte-1ayj6f9");
-    			add_location(div1, file$1, 157, 20, 5127);
+    			add_location(div1, file$1, 157, 20, 5139);
     			attr_dev(div2, "class", "p-3 mb-3 bg-main marg svelte-1ayj6f9");
-    			add_location(div2, file$1, 155, 16, 5009);
+    			add_location(div2, file$1, 155, 16, 5021);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -36073,7 +36073,7 @@ var app = (function () {
     	const getData = async e => {
     		const query = {};
     		if (e && e.target && e.target.name) category = e.target.name;
-    		if (viewMode == 3) query[category] = e.target.value;
+    		if (e.target && viewMode == 3) query[category] = e.target.value;
     		if (viewMode == 0) query.uid = $uid;
     		console.log(query);
     		let res;
