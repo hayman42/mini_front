@@ -34572,7 +34572,7 @@ var app = (function () {
     	return block;
     }
 
-    // (169:32) 
+    // (172:32) 
     function create_if_block_1$1(ctx) {
     	let userinfo;
     	let current;
@@ -34605,7 +34605,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(169:32) ",
+    		source: "(172:32) ",
     		ctx
     	});
 
@@ -34637,7 +34637,7 @@ var app = (function () {
     		/*introducemodal_showModal_binding*/ ctx[8](value);
     	}
 
-    	let introducemodal_props = {};
+    	let introducemodal_props = { createMode: true };
 
     	if (/*createModalOpen*/ ctx[2] !== void 0) {
     		introducemodal_props.showModal = /*createModalOpen*/ ctx[2];
@@ -34803,7 +34803,7 @@ var app = (function () {
     	return block;
     }
 
-    // (137:36) <CardTitle>
+    // (140:36) <CardTitle>
     function create_default_slot_9(ctx) {
     	let t_value = /*intro*/ ctx[17].title + "";
     	let t;
@@ -34827,14 +34827,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(137:36) <CardTitle>",
+    		source: "(140:36) <CardTitle>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (136:32) <CardHeader>
+    // (139:32) <CardHeader>
     function create_default_slot_8(ctx) {
     	let cardtitle;
     	let current;
@@ -34882,14 +34882,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(136:32) <CardHeader>",
+    		source: "(139:32) <CardHeader>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (140:36) <CardSubtitle                                          >
+    // (143:36) <CardSubtitle                                          >
     function create_default_slot_7(ctx) {
     	let t_value = new Date(/*intro*/ ctx[17].createdAt).toString().substring(0, new Date(/*intro*/ ctx[17].createdAt).toString().length - 17) + "";
     	let t;
@@ -34913,14 +34913,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(140:36) <CardSubtitle                                          >",
+    		source: "(143:36) <CardSubtitle                                          >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (150:36) <CardText>
+    // (153:36) <CardText>
     function create_default_slot_6(ctx) {
     	let t_value = /*intro*/ ctx[17].text + "";
     	let t;
@@ -34944,14 +34944,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(150:36) <CardText>",
+    		source: "(153:36) <CardText>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (139:32) <CardBody>
+    // (142:32) <CardBody>
     function create_default_slot_5(ctx) {
     	let cardsubtitle;
     	let t;
@@ -35024,14 +35024,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(139:32) <CardBody>",
+    		source: "(142:32) <CardBody>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (155:36) <Button on:click={toggle} value={intro._id}                                          >
+    // (158:36) <Button on:click={toggle} value={intro._id}                                          >
     function create_default_slot_4(ctx) {
     	let t;
 
@@ -35051,14 +35051,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(155:36) <Button on:click={toggle} value={intro._id}                                          >",
+    		source: "(158:36) <Button on:click={toggle} value={intro._id}                                          >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (154:32) <CardFooter>
+    // (157:32) <CardFooter>
     function create_default_slot_3$1(ctx) {
     	let button;
     	let t;
@@ -35152,14 +35152,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(154:32) <CardFooter>",
+    		source: "(157:32) <CardFooter>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (135:28) <Card class="mb-3">
+    // (138:28) <Card class="mb-3">
     function create_default_slot_2$1(ctx) {
     	let cardheader;
     	let t0;
@@ -35261,14 +35261,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(135:28) <Card class=\\\"mb-3\\\">",
+    		source: "(138:28) <Card class=\\\"mb-3\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (134:24) {#each result[name] as intro}
+    // (137:24) {#each result[name] as intro}
     function create_each_block_1(ctx) {
     	let card;
     	let current;
@@ -35317,14 +35317,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(134:24) {#each result[name] as intro}",
+    		source: "(137:24) {#each result[name] as intro}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (130:12) {#each Object.keys(result) as name}
+    // (133:12) {#each Object.keys(result) as name}
     function create_each_block(ctx) {
     	let div2;
     	let div0;
@@ -35360,11 +35360,11 @@ var app = (function () {
 
     			t2 = space();
     			attr_dev(div0, "class", "card-username svelte-1ayj6f9");
-    			add_location(div0, file$1, 131, 20, 4171);
+    			add_location(div0, file$1, 134, 20, 4236);
     			attr_dev(div1, "class", "scroll-item svelte-1ayj6f9");
-    			add_location(div1, file$1, 132, 20, 4232);
+    			add_location(div1, file$1, 135, 20, 4297);
     			attr_dev(div2, "class", "p-3 mb-3 bg-main marg svelte-1ayj6f9");
-    			add_location(div2, file$1, 130, 16, 4114);
+    			add_location(div2, file$1, 133, 16, 4179);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -35439,7 +35439,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(130:12) {#each Object.keys(result) as name}",
+    		source: "(133:12) {#each Object.keys(result) as name}",
     		ctx
     	});
 
