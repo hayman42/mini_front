@@ -7,10 +7,9 @@
         InputGroupText,
         Button,
     } from "sveltestrap";
+    import { serverUrl } from "./store";
     import qs from "qs";
     import axios from "axios";
-
-    export let serverUrl;
     export let isLoggedIn;
     let radioGroup;
 
@@ -24,7 +23,7 @@
         console.log(isLoggedIn);
         try {
             const res = await axios.get(
-                serverUrl + "/api/user/signin?" + qs.stringify(querys),
+                $serverUrl + "/api/user/signin?" + qs.stringify(querys),
                 { withCredentials: true }
             );
             const fromServer = res.data;

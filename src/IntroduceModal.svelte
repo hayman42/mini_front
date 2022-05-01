@@ -12,7 +12,73 @@
     } from "sveltestrap";
     import { parseCookie } from "./util";
     import { marked } from "marked";
-    import { mock } from "./mock";
+    import { serverUrl } from "./store";
+    import axios from "axios";
+    import qs from "qs";
+    export const update = (introduce, func) => async () => {
+        const { title, text } = introduce;
+        console.log(introduce);
+        const res = await axios.get(
+            $serverUrl +
+                `/api/intro/update/${introduce._id}?` +
+                qs.stringify({
+                    title,
+                    text,
+                }),
+            { withCredentials: true }
+        );
+        console.log(res);
+        if (!res.data._id) return alert("수정 실패");
+        alert("수정되었습니다.");
+        tempText = text;
+        tempTitle = title;
+        func();
+    };
+
+    export const create = (introduce, func) => async () => {
+        const { title, text } = introduce;
+        const res = await axios.get(
+            $serverUrl +
+                `/api/intro/create?` +
+                qs.stringify({
+                    title,
+                    text,
+                }),
+            { withCredentials: true }
+        );
+        if (!res.data == "ok") return alert("작성 실패");
+        alert("작성 성공");
+        func();
+    };
+
+    export const del = (introduce, func) => async () => {
+        const res = await axios.get(
+            $serverUrl + `/api/intro/delete/${introduce._id}`,
+            { withCredentials: true }
+        );
+        if (!res.data == "ok") return alert("삭제 실패");
+        alert("삭제 성공");
+        func();
+    };
+
+    export const doLike = (introduce, func) => async () => {
+        const res = await axios.get(
+            $serverUrl + `/api/intro/like/${introduce._id}`,
+            { withCredentials: true }
+        );
+        if (!res.data == "ok") return alert("잠시 후 다시 시도해주세요.");
+        func();
+    };
+
+    export const unLike = (introduce, func) => async () => {
+        const res = await axios.get(
+            $serverUrl + `/api/intro/unlike/${introduce._id}`,
+            { withCredentials: true }
+        );
+        if (!res.data == "ok") return alert("잠시 후 다시 시도해주세요.");
+        func();
+    };
+
     export let showModal = false;
     export let createMode = false;
     export let introduce;
@@ -31,22 +97,25 @@
     const resize = () => {
         document.querySelector(".markdown-editor__right-panel").style.width =
             100 - (modifyMode | createMode) * 50 + "%";
+        checkUser();
     };
-    const toggle = () => console.log((showModal = !showModal));
-    const cancel = () => {
+    const toggle = () => (showModal = !showModal);
+    const cancel = async () => {
         text = tempText;
         title = tempTitle;
         modifyToggle();
     };
-    const apply = () => {
-        console.log(text);
-        console.log(title);
-        tempText = text;
-        tempTitle = title;
-        modifyToggle();
+    const toggleLike = () => {
+        isLike = !isLike;
     };
-    const doLike = () => console.log((isLike = !isLike));
-    const create = () => {
+    const checkUser = () => {
+        console.log(document.cookie);
+        console.log(introduce.user._id);
+        if (parseCookie(document.cookie) === introduce.user._id) isOwner = true;
+    };
+
+    const goTarget = (e) => {
+        console.log(e.target.text);
         showModal = !showModal;
     };
 </script>
@@ -83,23 +152,30 @@
     </ModalBody>
     <ModalFooter>
         {#if modifyMode}
-            <Button class="apply button" color="primary" on:click={apply}
-                >적용</Button
+            <Button
+                class="apply button"
+                color="primary"
+                on:click={update(introduce, modifyToggle)}>적용</Button
             >
             <Button class="cancel button" color="primary" on:click={cancel}
                 >취소</Button
             >
         {:else if createMode}
-            <Button class="apply button" color="primary" on:click={create}
-                >생성</Button
+            <Button
+                class="apply button"
+                color="primary"
+                on:click={create(introduce, toggle)}>생성</Button
             >{:else if isOwner === true}
             <Dropdown direction="up">
                 <DropdownToggle color="primary" caret
                     >Like {likeN}</DropdownToggle
                 >
                 <DropdownMenu>
-                    <DropdownItem>Another Action</DropdownItem>
-                    <DropdownItem>Another Action</DropdownItem>
+                    {#each introduce.like_people as person}
+                        <DropdownItem on:click={goTarget}
+                            >{person.nickname}</DropdownItem
+                        >
+                    {/each}
                 </DropdownMenu>
             </Dropdown>
 
@@ -108,12 +184,18 @@
                 color="secondary"
                 on:click={modifyToggle}>수정</Button
             >
-            <Button class="remove button" color="secondary" on:click={toggle}
-                >삭제</Button
+            <Button
+                class="remove button"
+                color="secondary"
+                on:click={del(introduce, toggle)}>삭제</Button
             >
         {:else}
-            <Button class="like button" color="primary" on:click={doLike}
-                >Like {likeN}</Button
+            <Button
+                class="like button"
+                color="primary"
+                on:click={isLike
+                    ? unLike(introduce, toggleLike)
+                    : doLike(introduce, toggleLike)}>Like {likeN}</Button
             >
         {/if}
     </ModalFooter>

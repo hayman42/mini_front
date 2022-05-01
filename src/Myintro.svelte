@@ -15,12 +15,11 @@
     } from "sveltestrap";
     import IntroduceModal from "./IntroduceModal.svelte";
     import axios from "axios";
-
-    export let serverUrl;
+    import { serverUrl } from "./store";
     let introList = [];
     let opens = {};
     onMount(async () => {
-        const res = await axios.get(serverUrl + "/api/intro/myintro", {
+        const res = await axios.get($serverUrl + "/api/intro/myintro", {
             withCredentials: true,
         });
         introList = [...res.data];
@@ -51,7 +50,10 @@
         </CardBody>
         <CardFooter>
             <Button on:click={toggle} value={intro._id}>Get Started</Button>
-            <IntroduceModal showModal={opens[intro._id]} introduce={intro} />
+            <IntroduceModal
+                bind:showModal={opens[intro._id]}
+                introduce={intro}
+            />
         </CardFooter>
     </Card>
 {/each}
