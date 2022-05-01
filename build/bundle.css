@@ -111,7 +111,7 @@ h5 {
 }
 
 .card {
-    min-width: 200px;
+    min-width: 200px !important;
     margin: 5px;
 }
 
