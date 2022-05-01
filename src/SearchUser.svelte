@@ -2,6 +2,7 @@
 	import { Accordion, AccordionItem } from 'sveltestrap';
 	import { ListGroup, ListGroupItem } from 'sveltestrap';
 	import { Toast, ToastBody, ToastHeader } from 'sveltestrap';
+	import { Form, FormGroup, FormText, Input, Label } from 'sveltestrap';
 	import {
     Button,
     Card,
@@ -25,6 +26,9 @@
 </Accordion> -->
 
 <style>
+	.input-name {
+		margin: 10px;
+	}
 	.bg-main {
 		background-color: #013328;
 		border-radius:15px;
@@ -41,42 +45,28 @@
 		white-space:nowrap;
 		overflow:auto;
 		padding: 10px;
-		/* scroll-snap-type: x mandatory;	
-		-webkit-overflow-scrolling: touch;
-		overflow-x: scroll;
-		
-		scroll-snap-align: start; */
 	}
 	::-webkit-scrollbar {
-					/* 스크롤바 전체 영역 */
 		width: 15px;
 	} 
 	::-webkit-scrollbar-track {
-						/* 스크롤이 움직이는 영역  */
 		background-color: #f9f9f9;
 	} 
 	::-webkit-scrollbar-thumb {
-						/*  스크롤  */
 		background-color: #e3dcd2; 
 		border-radius:30px;
 	} 
 	::-webkit-scrollbar-button:start:decrement, 
 	::-webkit-scrollbar-button:end:increment {
-						/*  스크롤의 화살표가 포함된 영역   */
 		display:block;
 		height:8px;
 		background-color: #000;
 	} 
-	/* .card-item {
-		scroll-snap-align: start;
-		text-align: center;
-		position: relative;
-		display: inline;
-	} */
 </style>
 
-<input value={str} size="80px">
-
+<div class=input-name>
+	<Input type="email" name="name" placeholder="사용자 이름을 입력하세요"/>
+</div>
 <Row>
 	<Col xs="2">
 		<ListGroup>
