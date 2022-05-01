@@ -9,12 +9,11 @@
     import { onMount } from "svelte";
     import axios from "axios";
     import qs from "qs";
-
-    export let serverUrl;
+    import { serverUrl } from "./store";
     let userid, nickname, age, gender;
     onMount(async () => {
         let info = (
-            await axios.get(serverUrl + "/api/user/info", {
+            await axios.get($serverUrl + "/api/user/info", {
                 withCredentials: true,
             })
         ).data;
@@ -33,8 +32,7 @@
         }, {});
         console.log(qs.stringify(querys));
         const res = await axios.get(
-            "https://hayman42intropapp.herokuapp.com/api/user/update?" +
-                qs.stringify(querys),
+            $serverUrl + "/api/user/update?" + qs.stringify(querys),
             { withCredentials: true }
         );
     }

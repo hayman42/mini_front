@@ -19,13 +19,18 @@
 
     import IntroduceModal from "./IntroduceModal.svelte";
     import axios from "axios";
-    import { serverUrl } from "./store";
+    import { serverUrl, uid } from "./store";
     let result = {};
     let opens = {};
     onMount(async () => {
-        const res = await axios.get($serverUrl + "/api/intro/myintro", {
-            withCredentials: true,
-        });
+        console.log($uid);
+        const res = await axios.get(
+            $serverUrl + "/api/intro/myintro",
+            {
+                withCredentials: true,
+            },
+            { uid: $uid }
+        );
         res.data.forEach((intro) => {
             if (!result[intro.user.nickname]) result[intro.user.nickname] = [];
             result[intro.user.nickname] = [

@@ -25,7 +25,7 @@
                     title,
                     text,
                 }),
-            { withCredentials: true }
+            { withCredentials: true }, {uid:$uid}
         );
         console.log(res);
         if (!res.data._id) return alert("수정 실패");
@@ -44,7 +44,7 @@
                     title,
                     text,
                 }),
-            { withCredentials: true }
+            { withCredentials: true }, {uid:$uid}
         );
         if (!res.data == "ok") return alert("작성 실패");
         alert("작성 성공");
@@ -54,7 +54,7 @@
     export const del = (introduce, func) => async () => {
         const res = await axios.get(
             $serverUrl + `/api/intro/delete/${introduce._id}`,
-            { withCredentials: true }
+            { withCredentials: true }, {uid:$uid}
         );
         if (!res.data == "ok") return alert("삭제 실패");
         alert("삭제 성공");
@@ -64,7 +64,7 @@
     export const doLike = (introduce, func) => async () => {
         const res = await axios.get(
             $serverUrl + `/api/intro/like/${introduce._id}`,
-            { withCredentials: true }
+            { withCredentials: true }, {uid:$uid}
         );
         if (!res.data == "ok") return alert("잠시 후 다시 시도해주세요.");
         func();
@@ -73,7 +73,7 @@
     export const unLike = (introduce, func) => async () => {
         const res = await axios.get(
             $serverUrl + `/api/intro/unlike/${introduce._id}`,
-            { withCredentials: true }
+            { withCredentials: true }, {uid:$uid}
         );
         if (!res.data == "ok") return alert("잠시 후 다시 시도해주세요.");
         func();

@@ -25,7 +25,7 @@
         <SearchUser />
     {:else}
         <div style="height: 100px" />
-        <img src="/logo1.png" alt="logo" />
+        <img src="project/logo1.png" alt="logo" />
         <div style="height: 50px" />
         <Button
             type="button"

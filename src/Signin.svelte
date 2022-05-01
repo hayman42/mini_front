@@ -7,13 +7,14 @@
         InputGroupText,
         Button,
     } from "sveltestrap";
-    import { serverUrl } from "./store";
+    import { serverUrl, uid } from "./store";
     import qs from "qs";
     import axios from "axios";
+
     export let isLoggedIn;
     let radioGroup;
 
-    async function handleSignin() {
+    const handleSignin = async () => {
         const ids = ["userid", "password"];
         const querys = ids.reduce((res, key) => {
             res[key] = document.getElementById(key).value;
@@ -27,11 +28,20 @@
                 { withCredentials: true }
             );
             const fromServer = res.data;
-            isLoggedIn = fromServer.success;
+
+            window.uid = fromServer.uid;
+            $uid = fromServer.uid;
+            document.cookie = "uid=" + fromServer.uid;
+            if (fromServer.success) {
+                console.log(fromServer);
+                document.uid = "uid=" + fromServer.uid;
+                document.cookie = "uid=" + fromServer.uid;
+            }
+            console.log((isLoggedIn = fromServer.success));
         } catch (e) {
             console.log(e);
         }
-    }
+    };
 
     async function handleSignup() {
         const ids = ["userid", "password", "nickname", "age", "gender"];
@@ -40,11 +50,9 @@
             return res;
         }, {});
         // console.log(qs.stringify(querys));
-        const result = await axios.get(
-            "http://localhost:5000/api/user/signup?" + qs.stringify(querys)
+        await axios.get(
+            $serverUrl + "/api/user/signup?" + qs.stringify(querys)
         );
-
-        document.cookie = result.data.uid;
     }
 </script>
 
