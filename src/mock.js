@@ -2,9 +2,8 @@ export const mock = [
     {
         id: 1,
         user: 1,
-        title: `자기소개1`,
-        text: `
-  asdasdqweqwe
+        title: "자기소개",
+        text: `  asdasdqweqwe
   # asd
   ## asd
   ### asd

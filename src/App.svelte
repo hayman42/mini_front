@@ -1,13 +1,13 @@
 <script>
-    import Modal from "./Modal.svelte";
+    import Modal from "./IntroduceModal.svelte";
     let showModal = true;
-    export let name;
+
 </script>
 
 <main>
     <Modal userId="0" {showModal} />
 
-    <h1>Hello {name}!</h1>
+    <h1>Hello !</h1>
     <p>
         Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
         how to build Svelte apps.
