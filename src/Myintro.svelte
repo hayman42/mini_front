@@ -9,18 +9,33 @@
         CardSubtitle,
         CardText,
         CardTitle,
+        Modal,
+        ModalHeader,
+        ModalBody,
     } from "sveltestrap";
+    import IntroduceModal from "./IntroduceModal.svelte";
     import axios from "axios";
 
     export let serverUrl;
     let introList = [];
+    let opens = {};
     onMount(async () => {
         const res = await axios.get(serverUrl + "/api/intro/myintro", {
             withCredentials: true,
         });
-        introList = res.data;
-        // console.log(res.data);
+        introList = [...res.data];
+        introList.forEach((intro) => {
+            opens[intro._id] = false;
+        });
+        console.log(res.data);
     });
+
+    let open = false;
+    const toggle = (e) => {
+        opens[e.target.value] = !opens[e.target.value];
+        opens = { ...opens };
+        console.log(opens);
+    };
 </script>
 
 {#each introList as intro}
@@ -35,7 +50,8 @@
             </CardText>
         </CardBody>
         <CardFooter>
-            <Button>Button</Button>
+            <Button on:click={toggle} value={intro._id}>Get Started</Button>
+            <IntroduceModal showModal={opens[intro._id]} introduce={intro} />
         </CardFooter>
     </Card>
 {/each}
