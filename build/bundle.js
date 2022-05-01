@@ -34165,7 +34165,7 @@ var app = (function () {
     			div = element("div");
     			create_component(input.$$.fragment);
     			attr_dev(div, "class", "input-name svelte-1ayj6f9");
-    			add_location(div, file$1, 92, 4, 2897);
+    			add_location(div, file$1, 92, 4, 2924);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -35698,11 +35698,11 @@ var app = (function () {
 
     			t2 = space();
     			attr_dev(div0, "class", "card-username svelte-1ayj6f9");
-    			add_location(div0, file$1, 141, 20, 4504);
+    			add_location(div0, file$1, 141, 20, 4531);
     			attr_dev(div1, "class", "scroll-item svelte-1ayj6f9");
-    			add_location(div1, file$1, 142, 20, 4565);
+    			add_location(div1, file$1, 142, 20, 4592);
     			attr_dev(div2, "class", "p-3 mb-3 bg-main marg svelte-1ayj6f9");
-    			add_location(div2, file$1, 140, 16, 4447);
+    			add_location(div2, file$1, 140, 16, 4474);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -36075,6 +36075,7 @@ var app = (function () {
     		if (e && e.target && e.target.name) category = e.target.name;
     		query[category] = keyword;
     		if (viewMode == 0) query.uid = $uid;
+    		console.log(query);
     		const res = await axios.get($serverUrl + "/api/intro/search?" + lib.stringify({ ...query }), { withCredentials: true }, { uid: $uid });
     		console.log(res.data);
     		$$invalidate(0, result = {});
