@@ -1,5 +1,6 @@
 <script>
     import Signin from "./Signin.svelte";
+		import SearchUser from "./SearchUser.svelte";
     // import Userinfo from "./Userinfo.svelte";
     import Myintro from "./Myintro.svelte";
     import {
@@ -21,7 +22,7 @@
 
 <main>
     {#if isLoggedIn}
-        <Myintro />
+			<SearchUser></SearchUser>
     {:else}
         <div style="height: 100px" />
         <img src="/logo1.png" alt="logo" />
@@ -41,6 +42,9 @@
             </ModalBody>
         </Modal>
     {/if}
+<main>
+	
+	
 </main>
 
 <style>
