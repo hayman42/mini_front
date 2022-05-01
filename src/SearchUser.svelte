@@ -25,26 +25,54 @@
 </Accordion> -->
 
 <style>
-	.box {
-		width: 300px;
-		border: 1px solid #aaa;
-		border-radius: 2px;
-		box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-		padding: 1em;
-		margin: 0 0 1em 0;
+	.bg-main {
+		background-color: #013328;
+		border-radius:15px;
 	}
-
-	div {
-		background-color: #eee;
-	}
-
-	.active {
-		background-color: #ff3e00;
+	.card-username {
 		color: white;
+		font-weight: bold;
+		font-size: xx-large;
+		margin-bottom: 10px;
+		align-items: flex-start;
+		text-align: left;
 	}
-	.bar-layout {
-
+	.scroll-item {
+		white-space:nowrap;
+		overflow:auto;
+		padding: 10px;
+		/* scroll-snap-type: x mandatory;	
+		-webkit-overflow-scrolling: touch;
+		overflow-x: scroll;
+		
+		scroll-snap-align: start; */
 	}
+	::-webkit-scrollbar {
+					/* 스크롤바 전체 영역 */
+		width: 15px;
+	} 
+	::-webkit-scrollbar-track {
+						/* 스크롤이 움직이는 영역  */
+		background-color: #f9f9f9;
+	} 
+	::-webkit-scrollbar-thumb {
+						/*  스크롤  */
+		background-color: #e3dcd2; 
+		border-radius:30px;
+	} 
+	::-webkit-scrollbar-button:start:decrement, 
+	::-webkit-scrollbar-button:end:increment {
+						/*  스크롤의 화살표가 포함된 영역   */
+		display:block;
+		height:8px;
+		background-color: #000;
+	} 
+	/* .card-item {
+		scroll-snap-align: start;
+		text-align: center;
+		position: relative;
+		display: inline;
+	} */
 </style>
 
 <input value={str} size="80px">
@@ -58,44 +86,53 @@
 			<ListGroupItem>로그인</ListGroupItem>
 			<ListGroupItem>로그아웃</ListGroupItem>
 			<ListGroupItem>회원가입</ListGroupItem>
-			<ListGroupItem disabled>Disabled</ListGroupItem>
 		</ListGroup>
 	</Col>
 
 	<Col xs="9">
-	<h2>유저1(이름)</h2>
-	<div class="p-3 bg-black mb-3 marg">
-		
-		<Toast class="me-1">
-		<ToastHeader>CARD1</ToastHeader>
-		<ToastBody>
-			card1 상세내용
-		</ToastBody>
-		</Toast>
-
-		<Toast class="me-1">
-			<ToastHeader>CARD2</ToastHeader>
-			<ToastBody>
-			card2 상세내용
-			</ToastBody>
-		</Toast>
-	</div>
-
-	<h2>유저2(이름)</h2>
-	<div class="p-3 bg-black mb-3 marg">
-		<Toast class="me-1">
-			<ToastHeader>CARD1</ToastHeader>
-			<ToastBody>
-			card1 상세내용
-			</ToastBody>
-		</Toast>
 	
-		<Toast class="me-1">
-			<ToastHeader>CARD2</ToastHeader>
-			<ToastBody>
-				card2 상세내용
-			</ToastBody>
-		</Toast>
-	</div>
+		<div class="p-3 mb-3 bg-main marg">
+			<div class="card-username">유저1(이름)</div>
+
+			<div class="scroll-item">
+				<Toast>
+					<ToastHeader>CARD1</ToastHeader>
+					<ToastBody>card1 상세내용</ToastBody>
+				</Toast>
+				
+				<Toast class="me-1">
+					<ToastHeader>CARD2</ToastHeader>
+					<ToastBody>card2 상세내용</ToastBody>
+				</Toast>
+
+				<Toast class="me-1">
+					<ToastHeader>CARD3</ToastHeader>
+					<ToastBody>card3 상세내용</ToastBody>
+				</Toast>
+				
+			</div>
+		</div>
+
+		<div class="p-3 mb-3 bg-main marg">
+			<div class="card-username">유저2(이름)</div>
+
+			<div class="scroll-item">
+				<Toast>
+					<ToastHeader>CARD1</ToastHeader>
+					<ToastBody>card1 상세내용</ToastBody>
+				</Toast>
+				
+				<Toast class="me-1">
+					<ToastHeader>CARD2</ToastHeader>
+					<ToastBody>card2 상세내용</ToastBody>
+				</Toast>
+
+				<Toast class="me-1">
+					<ToastHeader>CARD3</ToastHeader>
+					<ToastBody>card3 상세내용</ToastBody>
+				</Toast>
+				
+			</div>
+		</div>
 	</Col>
 </Row>
