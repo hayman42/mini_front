@@ -34620,7 +34620,7 @@ var app = (function () {
     	return block;
     }
 
-    // (125:20) <Button on:click={toggle} func={getData} value={-1}                          >
+    // (125:20) <Button on:click={toggle} value={-1}                          >
     function create_default_slot_13(ctx) {
     	let t;
 
@@ -34640,7 +34640,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_13.name,
     		type: "slot",
-    		source: "(125:20) <Button on:click={toggle} func={getData} value={-1}                          >",
+    		source: "(125:20) <Button on:click={toggle} value={-1}                          >",
     		ctx
     	});
 
@@ -34657,7 +34657,6 @@ var app = (function () {
 
     	button = new Button({
     			props: {
-    				func: /*getData*/ ctx[5],
     				value: -1,
     				$$slots: { default: [create_default_slot_13] },
     				$$scope: { ctx }
@@ -34671,7 +34670,10 @@ var app = (function () {
     		/*introducemodal_showModal_binding*/ ctx[10](value);
     	}
 
-    	let introducemodal_props = { createMode: true };
+    	let introducemodal_props = {
+    		createMode: true,
+    		func: /*getData*/ ctx[5]
+    	};
 
     	if (/*createModalOpen*/ ctx[2] !== void 0) {
     		introducemodal_props.showModal = /*createModalOpen*/ ctx[2];
@@ -34992,7 +34994,7 @@ var app = (function () {
     	return block;
     }
 
-    // (178:32) 
+    // (179:32) 
     function create_if_block_1$1(ctx) {
     	let userinfo;
     	let current;
@@ -35025,14 +35027,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(178:32) ",
+    		source: "(179:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (138:8) {#if viewMode == 0 || viewMode == 3}
+    // (139:8) {#if viewMode == 0 || viewMode == 3}
     function create_if_block$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -35121,14 +35123,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(138:8) {#if viewMode == 0 || viewMode == 3}",
+    		source: "(139:8) {#if viewMode == 0 || viewMode == 3}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (146:36) <CardTitle>
+    // (147:36) <CardTitle>
     function create_default_slot_9(ctx) {
     	let t_value = /*intro*/ ctx[18].title + "";
     	let t;
@@ -35152,14 +35154,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(146:36) <CardTitle>",
+    		source: "(147:36) <CardTitle>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (145:32) <CardHeader>
+    // (146:32) <CardHeader>
     function create_default_slot_8(ctx) {
     	let cardtitle;
     	let current;
@@ -35207,14 +35209,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(145:32) <CardHeader>",
+    		source: "(146:32) <CardHeader>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (149:36) <CardSubtitle                                          >
+    // (150:36) <CardSubtitle                                          >
     function create_default_slot_7(ctx) {
     	let t_value = new Date(/*intro*/ ctx[18].createdAt).toString().substring(0, new Date(/*intro*/ ctx[18].createdAt).toString().length - 17) + "";
     	let t;
@@ -35238,14 +35240,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(149:36) <CardSubtitle                                          >",
+    		source: "(150:36) <CardSubtitle                                          >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (159:36) <CardText>
+    // (160:36) <CardText>
     function create_default_slot_6(ctx) {
     	let t_value = /*intro*/ ctx[18].text + "";
     	let t;
@@ -35269,14 +35271,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(159:36) <CardText>",
+    		source: "(160:36) <CardText>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (148:32) <CardBody>
+    // (149:32) <CardBody>
     function create_default_slot_5(ctx) {
     	let cardsubtitle;
     	let t;
@@ -35349,14 +35351,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(148:32) <CardBody>",
+    		source: "(149:32) <CardBody>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (164:36) <Button on:click={toggle} value={intro._id}                                          >
+    // (165:36) <Button on:click={toggle} value={intro._id}                                          >
     function create_default_slot_4(ctx) {
     	let t;
 
@@ -35376,14 +35378,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(164:36) <Button on:click={toggle} value={intro._id}                                          >",
+    		source: "(165:36) <Button on:click={toggle} value={intro._id}                                          >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (163:32) <CardFooter>
+    // (164:32) <CardFooter>
     function create_default_slot_3$1(ctx) {
     	let button;
     	let t;
@@ -35477,14 +35479,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(163:32) <CardFooter>",
+    		source: "(164:32) <CardFooter>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (144:28) <Card class="mb-3">
+    // (145:28) <Card class="mb-3">
     function create_default_slot_2$1(ctx) {
     	let cardheader;
     	let t0;
@@ -35586,14 +35588,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(144:28) <Card class=\\\"mb-3\\\">",
+    		source: "(145:28) <Card class=\\\"mb-3\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (143:24) {#each result[name] as intro}
+    // (144:24) {#each result[name] as intro}
     function create_each_block_1(ctx) {
     	let card;
     	let current;
@@ -35642,14 +35644,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(143:24) {#each result[name] as intro}",
+    		source: "(144:24) {#each result[name] as intro}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (139:12) {#each result && Object.keys(result) as name}
+    // (140:12) {#each result && Object.keys(result) as name}
     function create_each_block(ctx) {
     	let div2;
     	let div0;
@@ -35685,11 +35687,11 @@ var app = (function () {
 
     			t2 = space();
     			attr_dev(div0, "class", "card-username svelte-1ayj6f9");
-    			add_location(div0, file$1, 140, 20, 4479);
+    			add_location(div0, file$1, 141, 20, 4504);
     			attr_dev(div1, "class", "scroll-item svelte-1ayj6f9");
-    			add_location(div1, file$1, 141, 20, 4540);
+    			add_location(div1, file$1, 142, 20, 4565);
     			attr_dev(div2, "class", "p-3 mb-3 bg-main marg svelte-1ayj6f9");
-    			add_location(div2, file$1, 139, 16, 4422);
+    			add_location(div2, file$1, 140, 16, 4447);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -35764,14 +35766,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(139:12) {#each result && Object.keys(result) as name}",
+    		source: "(140:12) {#each result && Object.keys(result) as name}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (137:4) <Col xs="9">
+    // (138:4) <Col xs="9">
     function create_default_slot_1$1(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -35861,7 +35863,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(137:4) <Col xs=\\\"9\\\">",
+    		source: "(138:4) <Col xs=\\\"9\\\">",
     		ctx
     	});
 
