@@ -32559,9 +32559,9 @@ var app = (function () {
     	};
 
     	const del = (introduce, func) => async () => {
-    		const res = await axios.get($serverUrl + `/api/intro/delete/${introduce._id}` + lib.stringify({ uid: $uid }), { withCredentials: true });
+    		const res = await axios.get($serverUrl + `/api/intro/delete/${introduce._id}?` + lib.stringify({ uid: $uid }), { withCredentials: true });
     		console.log(res);
-    		if (!res.data == "ok") return alert("삭제 실패");
+    		if (res.data != "ok") return alert("삭제 실패");
     		alert("삭제 성공");
     		func();
     	};
