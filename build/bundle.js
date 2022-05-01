@@ -33964,7 +33964,7 @@ var app = (function () {
     			div = element("div");
     			create_component(input.$$.fragment);
     			attr_dev(div, "class", "input-name svelte-1ayj6f9");
-    			add_location(div, file$1, 92, 4, 2887);
+    			add_location(div, file$1, 92, 4, 2897);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -35405,11 +35405,11 @@ var app = (function () {
 
     			t3 = space();
     			attr_dev(div0, "class", "card-username svelte-1ayj6f9");
-    			add_location(div0, file$1, 129, 20, 4038);
+    			add_location(div0, file$1, 129, 20, 4048);
     			attr_dev(div1, "class", "scroll-item svelte-1ayj6f9");
-    			add_location(div1, file$1, 137, 20, 4421);
+    			add_location(div1, file$1, 137, 20, 4431);
     			attr_dev(div2, "class", "p-3 mb-3 bg-main marg svelte-1ayj6f9");
-    			add_location(div2, file$1, 128, 16, 3981);
+    			add_location(div2, file$1, 128, 16, 3991);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -35818,8 +35818,10 @@ var app = (function () {
     			if (!result[intro.user.nickname]) $$invalidate(0, result[intro.user.nickname] = [], result);
     			result[intro.user.nickname].push(intro);
     		});
-    		$$invalidate(0, result = { ...result, tmp });
-    		delete result.tmp;
+
+    		const tmparray = [];
+    		$$invalidate(0, result = { ...result, tmparray });
+    		delete result.tmparray;
     		console.log(result);
     	};
 
