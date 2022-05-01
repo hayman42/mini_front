@@ -11906,7 +11906,7 @@ var app = (function () {
 
     	const if_block_creators = [
     		create_if_block_3$3,
-    		create_if_block_4$3,
+    		create_if_block_4$2,
     		create_if_block_5,
     		create_if_block_6,
     		create_if_block_7,
@@ -13538,7 +13538,7 @@ var app = (function () {
     }
 
     // (114:32) 
-    function create_if_block_4$3(ctx) {
+    function create_if_block_4$2(ctx) {
     	let input;
     	let mounted;
     	let dispose;
@@ -13615,7 +13615,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_4$3.name,
+    		id: create_if_block_4$2.name,
     		type: "if",
     		source: "(114:32) ",
     		ctx
@@ -18217,7 +18217,7 @@ var app = (function () {
     	let dispose;
     	const external_slot_template = /*#slots*/ ctx[31].external;
     	const external_slot = create_slot(external_slot_template, ctx, /*$$scope*/ ctx[34], get_external_slot_context);
-    	let if_block0 = /*header*/ ctx[3] && create_if_block_4$2(ctx);
+    	let if_block0 = /*header*/ ctx[3] && create_if_block_4$1(ctx);
     	const if_block_creators = [create_if_block_3$2, create_else_block$5];
     	const if_blocks = [];
 
@@ -18307,7 +18307,7 @@ var app = (function () {
     						transition_in(if_block0, 1);
     					}
     				} else {
-    					if_block0 = create_if_block_4$2(ctx);
+    					if_block0 = create_if_block_4$1(ctx);
     					if_block0.c();
     					transition_in(if_block0, 1);
     					if_block0.m(div0, t1);
@@ -18413,7 +18413,7 @@ var app = (function () {
     }
 
     // (246:14) {#if header}
-    function create_if_block_4$2(ctx) {
+    function create_if_block_4$1(ctx) {
     	let modalheader;
     	let current;
 
@@ -18462,7 +18462,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_4$2.name,
+    		id: create_if_block_4$1.name,
     		type: "if",
     		source: "(246:14) {#if header}",
     		ctx
@@ -31443,7 +31443,7 @@ var app = (function () {
     }
 
     // (148:8) {#if modifyMode | createMode}
-    function create_if_block_4$1(ctx) {
+    function create_if_block_4(ctx) {
     	let textarea;
     	let mounted;
     	let dispose;
@@ -31477,7 +31477,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_4$1.name,
+    		id: create_if_block_4.name,
     		type: "if",
     		source: "(148:8) {#if modifyMode | createMode}",
     		ctx
@@ -31491,7 +31491,7 @@ var app = (function () {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*modifyMode*/ ctx[1] | /*createMode*/ ctx[3]) return create_if_block_4$1;
+    		if (/*modifyMode*/ ctx[1] | /*createMode*/ ctx[3]) return create_if_block_4;
     		return create_else_block_1;
     	}
 
@@ -34112,20 +34112,20 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[16] = list[i];
+    	child_ctx[15] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[19] = list[i];
-    	child_ctx[20] = list;
-    	child_ctx[21] = i;
+    	child_ctx[18] = list[i];
+    	child_ctx[19] = list;
+    	child_ctx[20] = i;
     	return child_ctx;
     }
 
     // (92:0) {#if viewMode == 3}
-    function create_if_block_4(ctx) {
+    function create_if_block_3(ctx) {
     	let div;
     	let input;
     	let updating_value;
@@ -34189,7 +34189,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_4.name,
+    		id: create_if_block_3.name,
     		type: "if",
     		source: "(92:0) {#if viewMode == 3}",
     		ctx
@@ -34199,7 +34199,7 @@ var app = (function () {
     }
 
     // (106:12) <ListGroupItem active>
-    function create_default_slot_23(ctx) {
+    function create_default_slot_22(ctx) {
     	let t;
 
     	const block = {
@@ -34216,7 +34216,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_23.name,
+    		id: create_default_slot_22.name,
     		type: "slot",
     		source: "(106:12) <ListGroupItem active>",
     		ctx
@@ -34226,7 +34226,7 @@ var app = (function () {
     }
 
     // (108:17) <Button value={0} on:click={changeView}>
-    function create_default_slot_22(ctx) {
+    function create_default_slot_21(ctx) {
     	let t;
 
     	const block = {
@@ -34243,7 +34243,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_22.name,
+    		id: create_default_slot_21.name,
     		type: "slot",
     		source: "(108:17) <Button value={0} on:click={changeView}>",
     		ctx
@@ -34253,14 +34253,14 @@ var app = (function () {
     }
 
     // (107:12) <ListGroupItem                  >
-    function create_default_slot_21(ctx) {
+    function create_default_slot_20(ctx) {
     	let button;
     	let current;
 
     	button = new Button({
     			props: {
     				value: 0,
-    				$$slots: { default: [create_default_slot_22] },
+    				$$slots: { default: [create_default_slot_21] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -34279,7 +34279,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 2097152) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -34301,7 +34301,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_21.name,
+    		id: create_default_slot_20.name,
     		type: "slot",
     		source: "(107:12) <ListGroupItem                  >",
     		ctx
@@ -34311,7 +34311,7 @@ var app = (function () {
     }
 
     // (112:17) <Button value={3} on:click={changeView}>
-    function create_default_slot_20(ctx) {
+    function create_default_slot_19(ctx) {
     	let t;
 
     	const block = {
@@ -34328,7 +34328,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_20.name,
+    		id: create_default_slot_19.name,
     		type: "slot",
     		source: "(112:17) <Button value={3} on:click={changeView}>",
     		ctx
@@ -34338,14 +34338,14 @@ var app = (function () {
     }
 
     // (111:12) <ListGroupItem                  >
-    function create_default_slot_19(ctx) {
+    function create_default_slot_18(ctx) {
     	let button;
     	let current;
 
     	button = new Button({
     			props: {
     				value: 3,
-    				$$slots: { default: [create_default_slot_20] },
+    				$$slots: { default: [create_default_slot_19] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -34364,7 +34364,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 2097152) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -34386,7 +34386,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_19.name,
+    		id: create_default_slot_18.name,
     		type: "slot",
     		source: "(111:12) <ListGroupItem                  >",
     		ctx
@@ -34396,7 +34396,7 @@ var app = (function () {
     }
 
     // (116:17) <Button value={1} on:click={changeView}>
-    function create_default_slot_18(ctx) {
+    function create_default_slot_17(ctx) {
     	let t;
 
     	const block = {
@@ -34413,7 +34413,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_18.name,
+    		id: create_default_slot_17.name,
     		type: "slot",
     		source: "(116:17) <Button value={1} on:click={changeView}>",
     		ctx
@@ -34423,14 +34423,14 @@ var app = (function () {
     }
 
     // (115:12) <ListGroupItem                  >
-    function create_default_slot_17(ctx) {
+    function create_default_slot_16(ctx) {
     	let button;
     	let current;
 
     	button = new Button({
     			props: {
     				value: 1,
-    				$$slots: { default: [create_default_slot_18] },
+    				$$slots: { default: [create_default_slot_17] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -34449,7 +34449,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 2097152) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -34471,7 +34471,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_17.name,
+    		id: create_default_slot_16.name,
     		type: "slot",
     		source: "(115:12) <ListGroupItem                  >",
     		ctx
@@ -34481,7 +34481,7 @@ var app = (function () {
     }
 
     // (120:17) <Button value={2} on:click={changeView}>
-    function create_default_slot_16(ctx) {
+    function create_default_slot_15(ctx) {
     	let t;
 
     	const block = {
@@ -34498,7 +34498,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_16.name,
+    		id: create_default_slot_15.name,
     		type: "slot",
     		source: "(120:17) <Button value={2} on:click={changeView}>",
     		ctx
@@ -34508,14 +34508,14 @@ var app = (function () {
     }
 
     // (119:12) <ListGroupItem                  >
-    function create_default_slot_15(ctx) {
+    function create_default_slot_14(ctx) {
     	let button;
     	let current;
 
     	button = new Button({
     			props: {
     				value: 2,
-    				$$slots: { default: [create_default_slot_16] },
+    				$$slots: { default: [create_default_slot_15] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -34534,7 +34534,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 2097152) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -34556,7 +34556,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_15.name,
+    		id: create_default_slot_14.name,
     		type: "slot",
     		source: "(119:12) <ListGroupItem                  >",
     		ctx
@@ -34566,13 +34566,13 @@ var app = (function () {
     }
 
     // (123:12) {#if viewMode == 0}
-    function create_if_block_3(ctx) {
+    function create_if_block_2(ctx) {
     	let listgroupitem;
     	let current;
 
     	listgroupitem = new ListGroupItem({
     			props: {
-    				$$slots: { default: [create_default_slot_13] },
+    				$$slots: { default: [create_default_slot_12] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -34589,7 +34589,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const listgroupitem_changes = {};
 
-    			if (dirty & /*$$scope, createModalOpen*/ 4194308) {
+    			if (dirty & /*$$scope, createModalOpen*/ 2097156) {
     				listgroupitem_changes.$$scope = { dirty, ctx };
     			}
 
@@ -34611,7 +34611,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_3.name,
+    		id: create_if_block_2.name,
     		type: "if",
     		source: "(123:12) {#if viewMode == 0}",
     		ctx
@@ -34621,12 +34621,12 @@ var app = (function () {
     }
 
     // (125:20) <Button on:click={toggle} func={getData} value={-1}                          >
-    function create_default_slot_14(ctx) {
+    function create_default_slot_13(ctx) {
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("생성하기");
+    			t = text("자기소개 작성하기");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -34638,7 +34638,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_14.name,
+    		id: create_default_slot_13.name,
     		type: "slot",
     		source: "(125:20) <Button on:click={toggle} func={getData} value={-1}                          >",
     		ctx
@@ -34648,7 +34648,7 @@ var app = (function () {
     }
 
     // (124:16) <ListGroupItem>
-    function create_default_slot_13(ctx) {
+    function create_default_slot_12(ctx) {
     	let button;
     	let t;
     	let introducemodal;
@@ -34659,7 +34659,7 @@ var app = (function () {
     			props: {
     				func: /*getData*/ ctx[5],
     				value: -1,
-    				$$slots: { default: [create_default_slot_14] },
+    				$$slots: { default: [create_default_slot_13] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -34699,7 +34699,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 2097152) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -34734,7 +34734,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_13.name,
+    		id: create_default_slot_12.name,
     		type: "slot",
     		source: "(124:16) <ListGroupItem>",
     		ctx
@@ -34744,7 +34744,7 @@ var app = (function () {
     }
 
     // (105:8) <ListGroup>
-    function create_default_slot_12(ctx) {
+    function create_default_slot_11(ctx) {
     	let listgroupitem0;
     	let t0;
     	let listgroupitem1;
@@ -34761,7 +34761,7 @@ var app = (function () {
     	listgroupitem0 = new ListGroupItem({
     			props: {
     				active: true,
-    				$$slots: { default: [create_default_slot_23] },
+    				$$slots: { default: [create_default_slot_22] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -34769,7 +34769,7 @@ var app = (function () {
 
     	listgroupitem1 = new ListGroupItem({
     			props: {
-    				$$slots: { default: [create_default_slot_21] },
+    				$$slots: { default: [create_default_slot_20] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -34777,7 +34777,7 @@ var app = (function () {
 
     	listgroupitem2 = new ListGroupItem({
     			props: {
-    				$$slots: { default: [create_default_slot_19] },
+    				$$slots: { default: [create_default_slot_18] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -34785,7 +34785,7 @@ var app = (function () {
 
     	listgroupitem3 = new ListGroupItem({
     			props: {
-    				$$slots: { default: [create_default_slot_17] },
+    				$$slots: { default: [create_default_slot_16] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -34793,13 +34793,13 @@ var app = (function () {
 
     	listgroupitem4 = new ListGroupItem({
     			props: {
-    				$$slots: { default: [create_default_slot_15] },
+    				$$slots: { default: [create_default_slot_14] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	let if_block = /*viewMode*/ ctx[3] == 0 && create_if_block_3(ctx);
+    	let if_block = /*viewMode*/ ctx[3] == 0 && create_if_block_2(ctx);
 
     	const block = {
     		c: function create() {
@@ -34834,35 +34834,35 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const listgroupitem0_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 2097152) {
     				listgroupitem0_changes.$$scope = { dirty, ctx };
     			}
 
     			listgroupitem0.$set(listgroupitem0_changes);
     			const listgroupitem1_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 2097152) {
     				listgroupitem1_changes.$$scope = { dirty, ctx };
     			}
 
     			listgroupitem1.$set(listgroupitem1_changes);
     			const listgroupitem2_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 2097152) {
     				listgroupitem2_changes.$$scope = { dirty, ctx };
     			}
 
     			listgroupitem2.$set(listgroupitem2_changes);
     			const listgroupitem3_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 2097152) {
     				listgroupitem3_changes.$$scope = { dirty, ctx };
     			}
 
     			listgroupitem3.$set(listgroupitem3_changes);
     			const listgroupitem4_changes = {};
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 2097152) {
     				listgroupitem4_changes.$$scope = { dirty, ctx };
     			}
 
@@ -34876,7 +34876,7 @@ var app = (function () {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block_3(ctx);
+    					if_block = create_if_block_2(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -34928,7 +34928,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_12.name,
+    		id: create_default_slot_11.name,
     		type: "slot",
     		source: "(105:8) <ListGroup>",
     		ctx
@@ -34938,13 +34938,13 @@ var app = (function () {
     }
 
     // (104:4) <Col xs="2">
-    function create_default_slot_11(ctx) {
+    function create_default_slot_10(ctx) {
     	let listgroup;
     	let current;
 
     	listgroup = new ListGroup({
     			props: {
-    				$$slots: { default: [create_default_slot_12] },
+    				$$slots: { default: [create_default_slot_11] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -34961,7 +34961,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const listgroup_changes = {};
 
-    			if (dirty & /*$$scope, createModalOpen, viewMode*/ 4194316) {
+    			if (dirty & /*$$scope, createModalOpen, viewMode*/ 2097164) {
     				listgroup_changes.$$scope = { dirty, ctx };
     			}
 
@@ -34983,7 +34983,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_11.name,
+    		id: create_default_slot_10.name,
     		type: "slot",
     		source: "(104:4) <Col xs=\\\"2\\\">",
     		ctx
@@ -34992,8 +34992,8 @@ var app = (function () {
     	return block;
     }
 
-    // (187:32) 
-    function create_if_block_2(ctx) {
+    // (178:32) 
+    function create_if_block_1$1(ctx) {
     	let userinfo;
     	let current;
     	userinfo = new Userinfo({ $$inline: true });
@@ -35023,9 +35023,9 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_2.name,
+    		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(187:32) ",
+    		source: "(178:32) ",
     		ctx
     	});
 
@@ -35065,7 +35065,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*result, Object, getData, opens, toggle, Date, createModalOpen, viewMode*/ 111) {
+    			if (dirty & /*result, Object, getData, opens, toggle, Date*/ 99) {
     				each_value = Object.keys(/*result*/ ctx[0]);
     				validate_each_argument(each_value);
     				let i;
@@ -35128,132 +35128,9 @@ var app = (function () {
     	return block;
     }
 
-    // (142:20) {#if viewMode == 0}
-    function create_if_block_1$1(ctx) {
-    	let button;
-    	let t;
-    	let introducemodal;
-    	let updating_showModal;
-    	let current;
-
-    	button = new Button({
-    			props: {
-    				func: /*getData*/ ctx[5],
-    				value: -1,
-    				$$slots: { default: [create_default_slot_10] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	button.$on("click", /*toggle*/ ctx[6]);
-
-    	function introducemodal_showModal_binding_1(value) {
-    		/*introducemodal_showModal_binding_1*/ ctx[11](value);
-    	}
-
-    	let introducemodal_props = { createMode: true };
-
-    	if (/*createModalOpen*/ ctx[2] !== void 0) {
-    		introducemodal_props.showModal = /*createModalOpen*/ ctx[2];
-    	}
-
-    	introducemodal = new IntroduceModal({
-    			props: introducemodal_props,
-    			$$inline: true
-    		});
-
-    	binding_callbacks.push(() => bind$1(introducemodal, 'showModal', introducemodal_showModal_binding_1));
-
-    	const block = {
-    		c: function create() {
-    			create_component(button.$$.fragment);
-    			t = space();
-    			create_component(introducemodal.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(button, target, anchor);
-    			insert_dev(target, t, anchor);
-    			mount_component(introducemodal, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const button_changes = {};
-
-    			if (dirty & /*$$scope*/ 4194304) {
-    				button_changes.$$scope = { dirty, ctx };
-    			}
-
-    			button.$set(button_changes);
-    			const introducemodal_changes = {};
-
-    			if (!updating_showModal && dirty & /*createModalOpen*/ 4) {
-    				updating_showModal = true;
-    				introducemodal_changes.showModal = /*createModalOpen*/ ctx[2];
-    				add_flush_callback(() => updating_showModal = false);
-    			}
-
-    			introducemodal.$set(introducemodal_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(button.$$.fragment, local);
-    			transition_in(introducemodal.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(button.$$.fragment, local);
-    			transition_out(introducemodal.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(button, detaching);
-    			if (detaching) detach_dev(t);
-    			destroy_component(introducemodal, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_1$1.name,
-    		type: "if",
-    		source: "(142:20) {#if viewMode == 0}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (143:24) <Button on:click={toggle} func={getData} value={-1}                              >
-    function create_default_slot_10(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("생성하기");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_10.name,
-    		type: "slot",
-    		source: "(143:24) <Button on:click={toggle} func={getData} value={-1}                              >",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (155:36) <CardTitle>
+    // (146:36) <CardTitle>
     function create_default_slot_9(ctx) {
-    	let t_value = /*intro*/ ctx[19].title + "";
+    	let t_value = /*intro*/ ctx[18].title + "";
     	let t;
 
     	const block = {
@@ -35264,7 +35141,7 @@ var app = (function () {
     			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*result*/ 1 && t_value !== (t_value = /*intro*/ ctx[19].title + "")) set_data_dev(t, t_value);
+    			if (dirty & /*result*/ 1 && t_value !== (t_value = /*intro*/ ctx[18].title + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t);
@@ -35275,14 +35152,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(155:36) <CardTitle>",
+    		source: "(146:36) <CardTitle>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (154:32) <CardHeader>
+    // (145:32) <CardHeader>
     function create_default_slot_8(ctx) {
     	let cardtitle;
     	let current;
@@ -35306,7 +35183,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const cardtitle_changes = {};
 
-    			if (dirty & /*$$scope, result*/ 4194305) {
+    			if (dirty & /*$$scope, result*/ 2097153) {
     				cardtitle_changes.$$scope = { dirty, ctx };
     			}
 
@@ -35330,16 +35207,16 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(154:32) <CardHeader>",
+    		source: "(145:32) <CardHeader>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (158:36) <CardSubtitle                                          >
+    // (149:36) <CardSubtitle                                          >
     function create_default_slot_7(ctx) {
-    	let t_value = new Date(/*intro*/ ctx[19].createdAt).toString().substring(0, new Date(/*intro*/ ctx[19].createdAt).toString().length - 17) + "";
+    	let t_value = new Date(/*intro*/ ctx[18].createdAt).toString().substring(0, new Date(/*intro*/ ctx[18].createdAt).toString().length - 17) + "";
     	let t;
 
     	const block = {
@@ -35350,7 +35227,7 @@ var app = (function () {
     			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*result*/ 1 && t_value !== (t_value = new Date(/*intro*/ ctx[19].createdAt).toString().substring(0, new Date(/*intro*/ ctx[19].createdAt).toString().length - 17) + "")) set_data_dev(t, t_value);
+    			if (dirty & /*result*/ 1 && t_value !== (t_value = new Date(/*intro*/ ctx[18].createdAt).toString().substring(0, new Date(/*intro*/ ctx[18].createdAt).toString().length - 17) + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t);
@@ -35361,16 +35238,16 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(158:36) <CardSubtitle                                          >",
+    		source: "(149:36) <CardSubtitle                                          >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (168:36) <CardText>
+    // (159:36) <CardText>
     function create_default_slot_6(ctx) {
-    	let t_value = /*intro*/ ctx[19].text + "";
+    	let t_value = /*intro*/ ctx[18].text + "";
     	let t;
 
     	const block = {
@@ -35381,7 +35258,7 @@ var app = (function () {
     			insert_dev(target, t, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*result*/ 1 && t_value !== (t_value = /*intro*/ ctx[19].text + "")) set_data_dev(t, t_value);
+    			if (dirty & /*result*/ 1 && t_value !== (t_value = /*intro*/ ctx[18].text + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t);
@@ -35392,14 +35269,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(168:36) <CardText>",
+    		source: "(159:36) <CardText>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (157:32) <CardBody>
+    // (148:32) <CardBody>
     function create_default_slot_5(ctx) {
     	let cardsubtitle;
     	let t;
@@ -35437,14 +35314,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const cardsubtitle_changes = {};
 
-    			if (dirty & /*$$scope, result*/ 4194305) {
+    			if (dirty & /*$$scope, result*/ 2097153) {
     				cardsubtitle_changes.$$scope = { dirty, ctx };
     			}
 
     			cardsubtitle.$set(cardsubtitle_changes);
     			const cardtext_changes = {};
 
-    			if (dirty & /*$$scope, result*/ 4194305) {
+    			if (dirty & /*$$scope, result*/ 2097153) {
     				cardtext_changes.$$scope = { dirty, ctx };
     			}
 
@@ -35472,14 +35349,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(157:32) <CardBody>",
+    		source: "(148:32) <CardBody>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (173:36) <Button on:click={toggle} value={intro._id}                                          >
+    // (164:36) <Button on:click={toggle} value={intro._id}                                          >
     function create_default_slot_4(ctx) {
     	let t;
 
@@ -35499,14 +35376,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(173:36) <Button on:click={toggle} value={intro._id}                                          >",
+    		source: "(164:36) <Button on:click={toggle} value={intro._id}                                          >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (172:32) <CardFooter>
+    // (163:32) <CardFooter>
     function create_default_slot_3$1(ctx) {
     	let button;
     	let t;
@@ -35516,7 +35393,7 @@ var app = (function () {
 
     	button = new Button({
     			props: {
-    				value: /*intro*/ ctx[19]._id,
+    				value: /*intro*/ ctx[18]._id,
     				$$slots: { default: [create_default_slot_4] },
     				$$scope: { ctx }
     			},
@@ -35525,17 +35402,17 @@ var app = (function () {
 
     	button.$on("click", /*toggle*/ ctx[6]);
 
-    	function introducemodal_showModal_binding_2(value) {
-    		/*introducemodal_showModal_binding_2*/ ctx[12](value, /*intro*/ ctx[19]);
+    	function introducemodal_showModal_binding_1(value) {
+    		/*introducemodal_showModal_binding_1*/ ctx[11](value, /*intro*/ ctx[18]);
     	}
 
     	let introducemodal_props = {
     		func: /*getData*/ ctx[5],
-    		introduce: /*intro*/ ctx[19]
+    		introduce: /*intro*/ ctx[18]
     	};
 
-    	if (/*opens*/ ctx[1][/*intro*/ ctx[19]._id] !== void 0) {
-    		introducemodal_props.showModal = /*opens*/ ctx[1][/*intro*/ ctx[19]._id];
+    	if (/*opens*/ ctx[1][/*intro*/ ctx[18]._id] !== void 0) {
+    		introducemodal_props.showModal = /*opens*/ ctx[1][/*intro*/ ctx[18]._id];
     	}
 
     	introducemodal = new IntroduceModal({
@@ -35543,7 +35420,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	binding_callbacks.push(() => bind$1(introducemodal, 'showModal', introducemodal_showModal_binding_2));
+    	binding_callbacks.push(() => bind$1(introducemodal, 'showModal', introducemodal_showModal_binding_1));
 
     	const block = {
     		c: function create() {
@@ -35560,19 +35437,19 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			const button_changes = {};
-    			if (dirty & /*result*/ 1) button_changes.value = /*intro*/ ctx[19]._id;
+    			if (dirty & /*result*/ 1) button_changes.value = /*intro*/ ctx[18]._id;
 
-    			if (dirty & /*$$scope*/ 4194304) {
+    			if (dirty & /*$$scope*/ 2097152) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
     			button.$set(button_changes);
     			const introducemodal_changes = {};
-    			if (dirty & /*result*/ 1) introducemodal_changes.introduce = /*intro*/ ctx[19];
+    			if (dirty & /*result*/ 1) introducemodal_changes.introduce = /*intro*/ ctx[18];
 
     			if (!updating_showModal && dirty & /*opens, result, Object*/ 3) {
     				updating_showModal = true;
-    				introducemodal_changes.showModal = /*opens*/ ctx[1][/*intro*/ ctx[19]._id];
+    				introducemodal_changes.showModal = /*opens*/ ctx[1][/*intro*/ ctx[18]._id];
     				add_flush_callback(() => updating_showModal = false);
     			}
 
@@ -35600,14 +35477,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(172:32) <CardFooter>",
+    		source: "(163:32) <CardFooter>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (153:28) <Card class="mb-3">
+    // (144:28) <Card class="mb-3">
     function create_default_slot_2$1(ctx) {
     	let cardheader;
     	let t0;
@@ -35662,21 +35539,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const cardheader_changes = {};
 
-    			if (dirty & /*$$scope, result*/ 4194305) {
+    			if (dirty & /*$$scope, result*/ 2097153) {
     				cardheader_changes.$$scope = { dirty, ctx };
     			}
 
     			cardheader.$set(cardheader_changes);
     			const cardbody_changes = {};
 
-    			if (dirty & /*$$scope, result*/ 4194305) {
+    			if (dirty & /*$$scope, result*/ 2097153) {
     				cardbody_changes.$$scope = { dirty, ctx };
     			}
 
     			cardbody.$set(cardbody_changes);
     			const cardfooter_changes = {};
 
-    			if (dirty & /*$$scope, result, opens*/ 4194307) {
+    			if (dirty & /*$$scope, result, opens*/ 2097155) {
     				cardfooter_changes.$$scope = { dirty, ctx };
     			}
 
@@ -35709,14 +35586,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(153:28) <Card class=\\\"mb-3\\\">",
+    		source: "(144:28) <Card class=\\\"mb-3\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (152:24) {#each result[name] as intro}
+    // (143:24) {#each result[name] as intro}
     function create_each_block_1(ctx) {
     	let card;
     	let current;
@@ -35741,7 +35618,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const card_changes = {};
 
-    			if (dirty & /*$$scope, result, opens*/ 4194307) {
+    			if (dirty & /*$$scope, result, opens*/ 2097155) {
     				card_changes.$$scope = { dirty, ctx };
     			}
 
@@ -35765,7 +35642,7 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(152:24) {#each result[name] as intro}",
+    		source: "(143:24) {#each result[name] as intro}",
     		ctx
     	});
 
@@ -35776,15 +35653,13 @@ var app = (function () {
     function create_each_block(ctx) {
     	let div2;
     	let div0;
-    	let t0_value = /*name*/ ctx[16] + "";
+    	let t0_value = /*name*/ ctx[15] + "";
     	let t0;
     	let t1;
-    	let t2;
     	let div1;
-    	let t3;
+    	let t2;
     	let current;
-    	let if_block = /*viewMode*/ ctx[3] == 0 && create_if_block_1$1(ctx);
-    	let each_value_1 = /*result*/ ctx[0][/*name*/ ctx[16]];
+    	let each_value_1 = /*result*/ ctx[0][/*name*/ ctx[15]];
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -35802,66 +35677,39 @@ var app = (function () {
     			div0 = element("div");
     			t0 = text(t0_value);
     			t1 = space();
-    			if (if_block) if_block.c();
-    			t2 = space();
     			div1 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t3 = space();
+    			t2 = space();
     			attr_dev(div0, "class", "card-username svelte-1ayj6f9");
-    			add_location(div0, file$1, 140, 20, 4464);
+    			add_location(div0, file$1, 140, 20, 4469);
     			attr_dev(div1, "class", "scroll-item svelte-1ayj6f9");
-    			add_location(div1, file$1, 150, 20, 4918);
+    			add_location(div1, file$1, 141, 20, 4530);
     			attr_dev(div2, "class", "p-3 mb-3 bg-main marg svelte-1ayj6f9");
-    			add_location(div2, file$1, 139, 16, 4407);
+    			add_location(div2, file$1, 139, 16, 4412);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
     			append_dev(div2, div0);
     			append_dev(div0, t0);
     			append_dev(div2, t1);
-    			if (if_block) if_block.m(div2, null);
-    			append_dev(div2, t2);
     			append_dev(div2, div1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div1, null);
     			}
 
-    			append_dev(div2, t3);
+    			append_dev(div2, t2);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if ((!current || dirty & /*result*/ 1) && t0_value !== (t0_value = /*name*/ ctx[16] + "")) set_data_dev(t0, t0_value);
-
-    			if (/*viewMode*/ ctx[3] == 0) {
-    				if (if_block) {
-    					if_block.p(ctx, dirty);
-
-    					if (dirty & /*viewMode*/ 8) {
-    						transition_in(if_block, 1);
-    					}
-    				} else {
-    					if_block = create_if_block_1$1(ctx);
-    					if_block.c();
-    					transition_in(if_block, 1);
-    					if_block.m(div2, t2);
-    				}
-    			} else if (if_block) {
-    				group_outros();
-
-    				transition_out(if_block, 1, 1, () => {
-    					if_block = null;
-    				});
-
-    				check_outros();
-    			}
+    			if ((!current || dirty & /*result*/ 1) && t0_value !== (t0_value = /*name*/ ctx[15] + "")) set_data_dev(t0, t0_value);
 
     			if (dirty & /*getData, result, Object, opens, toggle, Date*/ 99) {
-    				each_value_1 = /*result*/ ctx[0][/*name*/ ctx[16]];
+    				each_value_1 = /*result*/ ctx[0][/*name*/ ctx[15]];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -35890,7 +35738,6 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(if_block);
 
     			for (let i = 0; i < each_value_1.length; i += 1) {
     				transition_in(each_blocks[i]);
@@ -35899,7 +35746,6 @@ var app = (function () {
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(if_block);
     			each_blocks = each_blocks.filter(Boolean);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -35910,7 +35756,6 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
-    			if (if_block) if_block.d();
     			destroy_each(each_blocks, detaching);
     		}
     	};
@@ -35932,7 +35777,7 @@ var app = (function () {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$1, create_if_block_2];
+    	const if_block_creators = [create_if_block$1, create_if_block_1$1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -36033,7 +35878,7 @@ var app = (function () {
     	col0 = new Col({
     			props: {
     				xs: "2",
-    				$$slots: { default: [create_default_slot_11] },
+    				$$slots: { default: [create_default_slot_10] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -36063,14 +35908,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const col0_changes = {};
 
-    			if (dirty & /*$$scope, createModalOpen, viewMode*/ 4194316) {
+    			if (dirty & /*$$scope, createModalOpen, viewMode*/ 2097164) {
     				col0_changes.$$scope = { dirty, ctx };
     			}
 
     			col0.$set(col0_changes);
     			const col1_changes = {};
 
-    			if (dirty & /*$$scope, result, opens, createModalOpen, viewMode*/ 4194319) {
+    			if (dirty & /*$$scope, result, opens, viewMode*/ 2097163) {
     				col1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -36109,7 +35954,7 @@ var app = (function () {
     	let t;
     	let row;
     	let current;
-    	let if_block = /*viewMode*/ ctx[3] == 3 && create_if_block_4(ctx);
+    	let if_block = /*viewMode*/ ctx[3] == 3 && create_if_block_3(ctx);
 
     	row = new Row({
     			props: {
@@ -36143,7 +35988,7 @@ var app = (function () {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block_4(ctx);
+    					if_block = create_if_block_3(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(t.parentNode, t);
@@ -36160,7 +36005,7 @@ var app = (function () {
 
     			const row_changes = {};
 
-    			if (dirty & /*$$scope, result, opens, createModalOpen, viewMode*/ 4194319) {
+    			if (dirty & /*$$scope, result, opens, viewMode, createModalOpen*/ 2097167) {
     				row_changes.$$scope = { dirty, ctx };
     			}
 
@@ -36199,9 +36044,9 @@ var app = (function () {
     	let $uid;
     	let $serverUrl;
     	validate_store(uid, 'uid');
-    	component_subscribe($$self, uid, $$value => $$invalidate(14, $uid = $$value));
+    	component_subscribe($$self, uid, $$value => $$invalidate(13, $uid = $$value));
     	validate_store(serverUrl, 'serverUrl');
-    	component_subscribe($$self, serverUrl, $$value => $$invalidate(15, $serverUrl = $$value));
+    	component_subscribe($$self, serverUrl, $$value => $$invalidate(14, $serverUrl = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('SearchUser', slots, []);
     	let { isLoggedIn } = $$props;
@@ -36272,12 +36117,7 @@ var app = (function () {
     		$$invalidate(2, createModalOpen);
     	}
 
-    	function introducemodal_showModal_binding_1(value) {
-    		createModalOpen = value;
-    		$$invalidate(2, createModalOpen);
-    	}
-
-    	function introducemodal_showModal_binding_2(value, intro) {
+    	function introducemodal_showModal_binding_1(value, intro) {
     		if ($$self.$$.not_equal(opens[intro._id], value)) {
     			opens[intro._id] = value;
     			$$invalidate(1, opens);
@@ -36362,8 +36202,7 @@ var app = (function () {
     		isLoggedIn,
     		input_value_binding,
     		introducemodal_showModal_binding,
-    		introducemodal_showModal_binding_1,
-    		introducemodal_showModal_binding_2
+    		introducemodal_showModal_binding_1
     	];
     }
 
