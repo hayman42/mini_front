@@ -15,7 +15,7 @@
         <SearchUser bind:isLoggedIn />
     {:else}
         <div style="height: 100px" />
-        <img src="project/logo1.png" alt="logo" />
+        <img src="images/logo1.png" alt="logo" />
         <div style="height: 50px" />
         <Button
             type="button"
@@ -31,7 +31,7 @@
                 <Signin bind:isLoggedIn bind:serverMsg />
             </ModalBody>
             {#if serverMsg != ""}
-                <Alert {serverMsg} />
+                <Alert bind:serverMsg />
             {/if}
         </Modal>
     {/if}
