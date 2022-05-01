@@ -111,10 +111,11 @@
     const checkUser = () => {
         console.log(document.cookie);
         console.log(introduce.user._id);
-        let uid = parseCookie(document.cookie).uid.substring(3);
-        console.log(uid);
-        uid = uid.substring(0, uid.length - 1);
-        console.log(uid);
+        let uid = document.cookie;
+        // let uid = parseCookie(document.cookie).uid.substring(3);
+        // console.log(uid);
+        // uid = uid.substring(0, uid.length - 1);
+        // console.log(uid);
         if (uid === introduce.user._id) isOwner = true;
     };
 

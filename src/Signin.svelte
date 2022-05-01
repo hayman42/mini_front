@@ -40,9 +40,11 @@
             return res;
         }, {});
         // console.log(qs.stringify(querys));
-        await axios.get(
+        const result = await axios.get(
             "http://localhost:5000/api/user/signup?" + qs.stringify(querys)
         );
+
+        document.cookie = result.data.uid;
     }
 </script>
 
