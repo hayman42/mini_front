@@ -28,14 +28,9 @@
                 { withCredentials: true }
             );
             const fromServer = res.data;
-
-            window.uid = fromServer.uid;
-            $uid = fromServer.uid;
-            document.cookie = "uid=" + fromServer.uid;
             if (fromServer.success) {
                 console.log(fromServer);
-                document.uid = "uid=" + fromServer.uid;
-                document.cookie = "uid=" + fromServer.uid;
+                $uid = fromServer.uid;
             }
             console.log((isLoggedIn = fromServer.success));
         } catch (e) {

@@ -25,7 +25,7 @@
     onMount(async () => {
         console.log($uid);
         const res = await axios.get(
-            $serverUrl + "/api/intro/myintro",
+            $serverUrl + "/api/intro/myintro" + `?uid=${$uid}`,
             {
                 withCredentials: true,
             },
