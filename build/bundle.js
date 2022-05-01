@@ -33957,7 +33957,7 @@ var app = (function () {
 
     	input = new Input({ props: input_props, $$inline: true });
     	binding_callbacks.push(() => bind$1(input, 'value', input_value_binding));
-    	input.$on("change", /*getData*/ ctx[5]);
+    	input.$on("input", /*getData*/ ctx[5]);
 
     	const block = {
     		c: function create() {
@@ -35405,11 +35405,11 @@ var app = (function () {
 
     			t3 = space();
     			attr_dev(div0, "class", "card-username svelte-1ayj6f9");
-    			add_location(div0, file$1, 129, 20, 4005);
+    			add_location(div0, file$1, 129, 20, 4004);
     			attr_dev(div1, "class", "scroll-item svelte-1ayj6f9");
-    			add_location(div1, file$1, 137, 20, 4388);
+    			add_location(div1, file$1, 137, 20, 4387);
     			attr_dev(div2, "class", "p-3 mb-3 bg-main marg svelte-1ayj6f9");
-    			add_location(div2, file$1, 128, 16, 3948);
+    			add_location(div2, file$1, 128, 16, 3947);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
