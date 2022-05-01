@@ -35036,7 +35036,7 @@ var app = (function () {
     function create_if_block$1(ctx) {
     	let each_1_anchor;
     	let current;
-    	let each_value = /*result*/ ctx[0] || Object.keys(/*result*/ ctx[0]);
+    	let each_value = /*result*/ ctx[0] && Object.keys(/*result*/ ctx[0]);
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -35066,7 +35066,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*result, Object, getData, opens, toggle, Date*/ 99) {
-    				each_value = /*result*/ ctx[0] || Object.keys(/*result*/ ctx[0]);
+    				each_value = /*result*/ ctx[0] && Object.keys(/*result*/ ctx[0]);
     				validate_each_argument(each_value);
     				let i;
 
@@ -35649,7 +35649,7 @@ var app = (function () {
     	return block;
     }
 
-    // (139:12) {#each result || Object.keys(result) as name}
+    // (139:12) {#each result && Object.keys(result) as name}
     function create_each_block(ctx) {
     	let div2;
     	let div0;
@@ -35764,7 +35764,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(139:12) {#each result || Object.keys(result) as name}",
+    		source: "(139:12) {#each result && Object.keys(result) as name}",
     		ctx
     	});
 
