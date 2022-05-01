@@ -1,6 +1,6 @@
 <script>
 	import { Accordion, AccordionItem } from 'sveltestrap';
-	
+	import { ListGroup, ListGroupItem } from 'sveltestrap';
 	import { Toast, ToastBody, ToastHeader } from 'sveltestrap';
 	import {
     Button,
@@ -12,6 +12,7 @@
     CardText,
     CardTitle
   } from 'sveltestrap';
+  import { Col, Container, Row } from 'sveltestrap';
 	let str = '사용자 명을 입력하세요';
 </script>
 
@@ -41,25 +42,60 @@
 		background-color: #ff3e00;
 		color: white;
 	}
+	.bar-layout {
 
+	}
 </style>
 
 <input value={str} size="80px">
-	
 
-<div class="p-3 bg-black mb-3 marg">
-    <Toast class="me-1">
-      <ToastHeader>User1</ToastHeader>
-      <ToastBody>
-        This is a toast on a black background — check it out!
-      </ToastBody>
-	</Toast>
+<Row>
+	<Col xs="2">
+		<ListGroup>
+			<ListGroupItem active>MINI PROJECT</ListGroupItem>
+			<ListGroupItem>메인화면</ListGroupItem>
+			<ListGroupItem>회원정보 수정</ListGroupItem>
+			<ListGroupItem>로그인</ListGroupItem>
+			<ListGroupItem>로그아웃</ListGroupItem>
+			<ListGroupItem>회원가입</ListGroupItem>
+			<ListGroupItem disabled>Disabled</ListGroupItem>
+		</ListGroup>
+	</Col>
 
-	<Toast class="me-1">
-		<ToastHeader>User2</ToastHeader>
+	<Col xs="9">
+	<h2>유저1(이름)</h2>
+	<div class="p-3 bg-black mb-3 marg">
+		
+		<Toast class="me-1">
+		<ToastHeader>CARD1</ToastHeader>
 		<ToastBody>
-		  This is a toast on a black background — check it out!
+			card1 상세내용
 		</ToastBody>
-	</Toast>
-</div>
+		</Toast>
 
+		<Toast class="me-1">
+			<ToastHeader>CARD2</ToastHeader>
+			<ToastBody>
+			card2 상세내용
+			</ToastBody>
+		</Toast>
+	</div>
+
+	<h2>유저2(이름)</h2>
+	<div class="p-3 bg-black mb-3 marg">
+		<Toast class="me-1">
+			<ToastHeader>CARD1</ToastHeader>
+			<ToastBody>
+			card1 상세내용
+			</ToastBody>
+		</Toast>
+	
+		<Toast class="me-1">
+			<ToastHeader>CARD2</ToastHeader>
+			<ToastBody>
+				card2 상세내용
+			</ToastBody>
+		</Toast>
+	</div>
+	</Col>
+</Row>
