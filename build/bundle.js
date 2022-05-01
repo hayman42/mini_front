@@ -33959,7 +33959,7 @@ var app = (function () {
     			div = element("div");
     			create_component(input.$$.fragment);
     			attr_dev(div, "class", "input-name svelte-1ayj6f9");
-    			add_location(div, file$1, 92, 4, 2897);
+    			add_location(div, file$1, 92, 4, 2917);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -35359,11 +35359,11 @@ var app = (function () {
 
     			t2 = space();
     			attr_dev(div0, "class", "card-username svelte-1ayj6f9");
-    			add_location(div0, file$1, 130, 20, 4127);
+    			add_location(div0, file$1, 130, 20, 4147);
     			attr_dev(div1, "class", "scroll-item svelte-1ayj6f9");
-    			add_location(div1, file$1, 131, 20, 4188);
+    			add_location(div1, file$1, 131, 20, 4208);
     			attr_dev(div2, "class", "p-3 mb-3 bg-main marg svelte-1ayj6f9");
-    			add_location(div2, file$1, 129, 16, 4070);
+    			add_location(div2, file$1, 129, 16, 4090);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -35737,6 +35737,7 @@ var app = (function () {
     		query[category] = keyword;
     		if (viewMode == 0) query.uid = $uid;
     		const res = await axios.get($serverUrl + "/api/intro/search?" + lib.stringify({ ...query }), { withCredentials: true }, { uid: $uid });
+    		$$invalidate(0, result = {});
 
     		res.data.forEach(intro => {
     			if (!result[intro.user.nickname]) $$invalidate(0, result[intro.user.nickname] = [], result);
