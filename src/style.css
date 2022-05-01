@@ -1,3 +1,103 @@
-input {
-    margin-left: 10px;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+h1,
+.title {
+    font-weight: 900;
+    font-size: xx-large;
+    font-family: "Noto Sans KR";
+}
+
+textarea {
+    resize: none !important;
+    outline: solid 1px rgba(122, 121, 121, 0.2) !important ;
+}
+
+.title {
+    height: 80px;
+    width: auto;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: x-large;
+    font-family: "Noto Sans KR";
+}
+h3 {
+    font-weight: 500;
+    font-size: larger;
+    font-family: "Noto Sans KR";
+}
+
+h4 {
+    font-weight: 400;
+    font-size: large;
+    font-family: "Noto Sans KR";
+}
+
+h5 {
+    font-weight: 300;
+    font-size: medium;
+    font-family: "Noto Sans KR";
+}
+
+* {
+    font-weight: bold;
+    font: rgb(32, 32, 32);
+}
+.modal-dialog {
+    display: flex;
+}
+.header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-title {
+    margin: 0;
+}
+.markdown-editor {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.markdown-editor__left-panel,
+.markdown-editor__right-panel {
+    display: block;
+    width: 50%;
+    max-width: 100%;
+    height: 100vh;
+}
+
+.markdown-editor__right-panel {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+}
+.markdown-editor__right-panel {
+    overflow: auto;
+}
+.markdown-editor__source {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.markdown-editor__source:focus {
+    outline: black;
+}
+.markdown-editor__output {
+    width: 100%;
+    padding: 0 2em;
+}
+.footer {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
