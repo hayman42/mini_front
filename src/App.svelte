@@ -61,7 +61,7 @@
 
 	main {
 		text-align: center;
-		background-color: #CC8B65;
+		background-color: #E3DCD2;
 		width: 100%;
 		height: 100%;
 	}
