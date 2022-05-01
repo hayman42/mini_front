@@ -9,13 +9,17 @@
     import { onMount } from "svelte";
     import axios from "axios";
     import qs from "qs";
-    import { serverUrl } from "./store";
+    import { serverUrl, uid } from "./store";
+
     let userid, nickname, age, gender;
     onMount(async () => {
         let info = (
-            await axios.get($serverUrl + "/api/user/info", {
-                withCredentials: true,
-            })
+            await axios.get(
+                $serverUrl + "/api/user/info?" + qs.stringify({ uid: $uid }),
+                {
+                    withCredentials: true,
+                }
+            )
         ).data;
         console.log(info);
         userid = info.userid;
@@ -26,10 +30,11 @@
 
     async function handleSubmit() {
         const ids = ["userid", "cur_pw", "new_pw", "nickname", "age"];
-        const querys = ids.reduce((res, key) => {
+        let querys = ids.reduce((res, key) => {
             res[key] = document.getElementById(key).value;
             return res;
         }, {});
+        querys["uid"] = $uid;
         console.log(qs.stringify(querys));
         const res = await axios.get(
             $serverUrl + "/api/user/update?" + qs.stringify(querys),

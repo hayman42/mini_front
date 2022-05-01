@@ -10,11 +10,11 @@
         DropdownMenu,
         DropdownToggle,
     } from "sveltestrap";
-    import { parseCookie } from "./util";
     import { marked } from "marked";
-    import { serverUrl } from "./store";
+    import { serverUrl, uid } from "./store";
     import axios from "axios";
     import qs from "qs";
+
     export const update = (introduce, func) => async () => {
         const { title, text } = introduce;
         console.log(introduce);
@@ -22,10 +22,12 @@
             $serverUrl +
                 `/api/intro/update/${introduce._id}?` +
                 qs.stringify({
+                    uid: $uid,
                     title,
                     text,
                 }),
-            { withCredentials: true }, {uid:$uid}
+            { withCredentials: true },
+            { uid: $uid }
         );
         console.log(res);
         if (!res.data._id) return alert("수정 실패");
@@ -41,10 +43,12 @@
             $serverUrl +
                 `/api/intro/create?` +
                 qs.stringify({
+                    uid: $uid,
                     title,
                     text,
                 }),
-            { withCredentials: true }, {uid:$uid}
+            { withCredentials: true },
+            { uid: $uid }
         );
         if (!res.data == "ok") return alert("작성 실패");
         alert("작성 성공");
@@ -54,7 +58,7 @@
     export const del = (introduce, func) => async () => {
         const res = await axios.get(
             $serverUrl + `/api/intro/delete/${introduce._id}`,
-            { withCredentials: true }, {uid:$uid}
+            { withCredentials: true }
         );
         if (!res.data == "ok") return alert("삭제 실패");
         alert("삭제 성공");
@@ -63,8 +67,12 @@
 
     export const doLike = (introduce, func) => async () => {
         const res = await axios.get(
-            $serverUrl + `/api/intro/like/${introduce._id}`,
-            { withCredentials: true }, {uid:$uid}
+            $serverUrl +
+                `/api/intro/like/${introduce._id}` +
+                qs.stringify({
+                    uid: $uid,
+                }),
+            { withCredentials: true }
         );
         if (!res.data == "ok") return alert("잠시 후 다시 시도해주세요.");
         func();
@@ -72,8 +80,13 @@
 
     export const unLike = (introduce, func) => async () => {
         const res = await axios.get(
-            $serverUrl + `/api/intro/unlike/${introduce._id}`,
-            { withCredentials: true }, {uid:$uid}
+            $serverUrl +
+                `/api/intro/unlike/${introduce._id}` +
+                qs.stringify({
+                    uid: $uid,
+                }),
+            { withCredentials: true },
+            { uid: $uid }
         );
         if (!res.data == "ok") return alert("잠시 후 다시 시도해주세요.");
         func();
@@ -109,14 +122,13 @@
         isLike = !isLike;
     };
     const checkUser = () => {
-        console.log(document.cookie);
-        console.log(introduce.user._id);
-        let uid = document.cookie;
         // let uid = parseCookie(document.cookie).uid.substring(3);
         // console.log(uid);
         // uid = uid.substring(0, uid.length - 1);
         // console.log(uid);
-        if (uid === introduce.user._id) isOwner = true;
+        if ($uid === introduce.user._id) isOwner = true;
+        console.log("from check user" + uid);
+        console.log(isOwner);
     };
 
     const goTarget = (e) => {

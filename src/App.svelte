@@ -1,28 +1,18 @@
 <script>
     import Signin from "./Signin.svelte";
     import SearchUser from "./SearchUser.svelte";
-    // import Userinfo from "./Userinfo.svelte";
-    import Myintro from "./Myintro.svelte";
-    import {
-        Image,
-        Button,
-        Modal,
-        ModalHeader,
-        ModalBody,
-        ModalFooter,
-        Nav,
-        NavItem,
-        Navbar,
-    } from "sveltestrap";
+    import Alert from "./Alert.svelte";
+    import { Button, Modal, ModalHeader, ModalBody } from "sveltestrap";
     export { serverUrl } from "./store.js";
     let open = false;
-    let isLoggedIn = false;
+    let isLoggedIn = 0;
+    let serverMsg = "";
     const toggle = () => (open = !open);
 </script>
 
 <main>
     {#if isLoggedIn}
-        <SearchUser />
+        <SearchUser bind:isLoggedIn />
     {:else}
         <div style="height: 100px" />
         <img src="project/logo1.png" alt="logo" />
@@ -33,13 +23,16 @@
             style="height: 40px;background-color: #013328;border-radius: 10%;"
             class="btn btn-link"
         >
-            <a style="color: #E3DCD2"> Sign In / Sign Up</a>
+            <p style="color: #E3DCD2">Sign In / Sign Up</p>
         </Button>
         <Modal isOpen={open} {toggle}>
             <ModalHeader {toggle}>로그인을 하여 시작하세요.</ModalHeader>
             <ModalBody>
-                <Signin bind:isLoggedIn />
+                <Signin bind:isLoggedIn bind:serverMsg />
             </ModalBody>
+            {#if serverMsg != ""}
+                <Alert {serverMsg} />
+            {/if}
         </Modal>
     {/if}
 </main>
