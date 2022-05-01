@@ -10,8 +10,9 @@
     import qs from "qs";
     import axios from "axios";
 
+    export let serverUrl;
+    export let isLoggedIn;
     let radioGroup;
-    $: load = 0;
 
     async function handleSignin() {
         const ids = ["userid", "password"];
@@ -19,13 +20,15 @@
             res[key] = document.getElementById(key).value;
             return res;
         }, {});
-        console.log(qs.stringify(querys));
+        // console.log(qs.stringify(querys));
+        console.log(isLoggedIn);
         try {
-            await axios.get(
-                "http://localhost:5000/api/user/signin?" + qs.stringify(querys)
+            const res = await axios.get(
+                serverUrl + "/api/user/signin?" + qs.stringify(querys),
+                { withCredentials: true }
             );
-            document.cookie = `userid=${querys["userid"]}`;
-            load = 1;
+            const fromServer = res.data;
+            isLoggedIn = fromServer.success;
         } catch (e) {
             console.log(e);
         }
