@@ -31227,7 +31227,7 @@ var app = (function () {
     			h1 = element("h1");
     			t = text(/*title*/ ctx[7]);
     			attr_dev(h1, "class", "svelte-6llzvk");
-    			add_location(h1, file$3, 146, 12, 4366);
+    			add_location(h1, file$3, 146, 12, 4376);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -31262,7 +31262,7 @@ var app = (function () {
     		c: function create() {
     			textarea = element("textarea");
     			attr_dev(textarea, "class", "title");
-    			add_location(textarea, file$3, 144, 12, 4290);
+    			add_location(textarea, file$3, 144, 12, 4300);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -31359,9 +31359,9 @@ var app = (function () {
     			div = element("div");
     			textarea = element("textarea");
     			attr_dev(textarea, "class", "markdown-editor__source");
-    			add_location(textarea, file$3, 153, 20, 4598);
+    			add_location(textarea, file$3, 153, 20, 4608);
     			attr_dev(div, "class", "markdown-editor__left-panel");
-    			add_location(div, file$3, 152, 16, 4535);
+    			add_location(div, file$3, 152, 16, 4545);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -31415,11 +31415,11 @@ var app = (function () {
     			attr_dev(div0, "oncontextmenu", "return false");
     			attr_dev(div0, "ondragstart", "return false");
     			attr_dev(div0, "onselectstart", "return false");
-    			add_location(div0, file$3, 160, 16, 4848);
+    			add_location(div0, file$3, 160, 16, 4858);
     			attr_dev(div1, "class", "markdown-editor__right-panel");
-    			add_location(div1, file$3, 159, 12, 4788);
+    			add_location(div1, file$3, 159, 12, 4798);
     			attr_dev(div2, "class", "markdown-editor");
-    			add_location(div2, file$3, 150, 8, 4444);
+    			add_location(div2, file$3, 150, 8, 4454);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -32576,7 +32576,7 @@ var app = (function () {
     	let { showModal = false } = $$props;
     	let { createMode = false } = $$props;
     	let { introduce } = $$props;
-    	let { title, text } = introduce;
+    	let { title = "", text = "" } = introduce;
     	let tempText = text;
     	let tempTitle = title;
     	let { modifyMode = false } = $$props;
