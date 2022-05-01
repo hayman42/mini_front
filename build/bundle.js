@@ -31407,7 +31407,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (151:8) {:else}
+    // (153:8) {:else}
     function create_else_block_1(ctx) {
     	let h1;
     	let t;
@@ -31417,7 +31417,7 @@ var app = (function () {
     			h1 = element("h1");
     			t = text(/*title*/ ctx[7]);
     			attr_dev(h1, "class", "svelte-6llzvk");
-    			add_location(h1, file$3, 151, 12, 4392);
+    			add_location(h1, file$3, 153, 12, 4458);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -31435,14 +31435,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(151:8) {:else}",
+    		source: "(153:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (149:8) {#if modifyMode | createMode}
+    // (151:8) {#if modifyMode | createMode}
     function create_if_block_4(ctx) {
     	let textarea;
     	let mounted;
@@ -31452,7 +31452,7 @@ var app = (function () {
     		c: function create() {
     			textarea = element("textarea");
     			attr_dev(textarea, "class", "title");
-    			add_location(textarea, file$3, 149, 12, 4316);
+    			add_location(textarea, file$3, 151, 12, 4382);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -31479,14 +31479,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(149:8) {#if modifyMode | createMode}",
+    		source: "(151:8) {#if modifyMode | createMode}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (148:4) <ModalHeader {toggle}>
+    // (150:4) <ModalHeader {toggle}>
     function create_default_slot_13$2(ctx) {
     	let if_block_anchor;
 
@@ -31530,14 +31530,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13$2.name,
     		type: "slot",
-    		source: "(148:4) <ModalHeader {toggle}>",
+    		source: "(150:4) <ModalHeader {toggle}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (157:12) {#if modifyMode || createMode}
+    // (159:12) {#if modifyMode || createMode}
     function create_if_block_3$1(ctx) {
     	let div;
     	let textarea;
@@ -31549,9 +31549,9 @@ var app = (function () {
     			div = element("div");
     			textarea = element("textarea");
     			attr_dev(textarea, "class", "markdown-editor__source");
-    			add_location(textarea, file$3, 158, 20, 4624);
+    			add_location(textarea, file$3, 160, 20, 4690);
     			attr_dev(div, "class", "markdown-editor__left-panel");
-    			add_location(div, file$3, 157, 16, 4561);
+    			add_location(div, file$3, 159, 16, 4627);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -31579,14 +31579,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(157:12) {#if modifyMode || createMode}",
+    		source: "(159:12) {#if modifyMode || createMode}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (155:4) <ModalBody>
+    // (157:4) <ModalBody>
     function create_default_slot_12$2(ctx) {
     	let div2;
     	let t;
@@ -31605,11 +31605,11 @@ var app = (function () {
     			attr_dev(div0, "oncontextmenu", "return false");
     			attr_dev(div0, "ondragstart", "return false");
     			attr_dev(div0, "onselectstart", "return false");
-    			add_location(div0, file$3, 165, 16, 4874);
+    			add_location(div0, file$3, 167, 16, 4940);
     			attr_dev(div1, "class", "markdown-editor__right-panel");
-    			add_location(div1, file$3, 164, 12, 4814);
+    			add_location(div1, file$3, 166, 12, 4880);
     			attr_dev(div2, "class", "markdown-editor");
-    			add_location(div2, file$3, 155, 8, 4470);
+    			add_location(div2, file$3, 157, 8, 4536);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -31644,14 +31644,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12$2.name,
     		type: "slot",
-    		source: "(155:4) <ModalBody>",
+    		source: "(157:4) <ModalBody>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (216:8) {:else}
+    // (218:8) {:else}
     function create_else_block$1(ctx) {
     	let button;
     	let current;
@@ -31710,14 +31710,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(216:8) {:else}",
+    		source: "(218:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (192:40) 
+    // (194:40) 
     function create_if_block_2$1(ctx) {
     	let dropdown;
     	let t0;
@@ -31827,14 +31827,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(192:40) ",
+    		source: "(194:40) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (187:29) 
+    // (189:29) 
     function create_if_block_1$2(ctx) {
     	let button;
     	let current;
@@ -31889,14 +31889,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(187:29) ",
+    		source: "(189:29) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (178:8) {#if modifyMode}
+    // (180:8) {#if modifyMode}
     function create_if_block$2(ctx) {
     	let button0;
     	let t;
@@ -31980,14 +31980,14 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(178:8) {#if modifyMode}",
+    		source: "(180:8) {#if modifyMode}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (217:12) <Button                  class="like button"                  color="primary"                  on:click={isLike ? unLike(toggleLike) : doLike(toggleLike)}                  >
+    // (219:12) <Button                  class="like button"                  color="primary"                  on:click={isLike ? unLike(toggleLike) : doLike(toggleLike)}                  >
     function create_default_slot_11$2(ctx) {
     	let t0;
     	let t1;
@@ -32014,14 +32014,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$2.name,
     		type: "slot",
-    		source: "(217:12) <Button                  class=\\\"like button\\\"                  color=\\\"primary\\\"                  on:click={isLike ? unLike(toggleLike) : doLike(toggleLike)}                  >",
+    		source: "(219:12) <Button                  class=\\\"like button\\\"                  color=\\\"primary\\\"                  on:click={isLike ? unLike(toggleLike) : doLike(toggleLike)}                  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (194:16) <DropdownToggle color="primary" caret                      >
+    // (196:16) <DropdownToggle color="primary" caret                      >
     function create_default_slot_10$2(ctx) {
     	let t0;
     	let t1;
@@ -32048,14 +32048,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$2.name,
     		type: "slot",
-    		source: "(194:16) <DropdownToggle color=\\\"primary\\\" caret                      >",
+    		source: "(196:16) <DropdownToggle color=\\\"primary\\\" caret                      >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (199:24) <DropdownItem on:click={goTarget}                              >
+    // (201:24) <DropdownItem on:click={goTarget}                              >
     function create_default_slot_9$2(ctx) {
     	let t_value = /*person*/ ctx[30].nickname + "";
     	let t;
@@ -32079,14 +32079,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$2.name,
     		type: "slot",
-    		source: "(199:24) <DropdownItem on:click={goTarget}                              >",
+    		source: "(201:24) <DropdownItem on:click={goTarget}                              >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (198:20) {#each introduce.like_people as person}
+    // (200:20) {#each introduce.like_people as person}
     function create_each_block$1(ctx) {
     	let dropdownitem;
     	let current;
@@ -32136,14 +32136,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(198:20) {#each introduce.like_people as person}",
+    		source: "(200:20) {#each introduce.like_people as person}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (197:16) <DropdownMenu>
+    // (199:16) <DropdownMenu>
     function create_default_slot_8$2(ctx) {
     	let each_1_anchor;
     	let current;
@@ -32232,14 +32232,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$2.name,
     		type: "slot",
-    		source: "(197:16) <DropdownMenu>",
+    		source: "(199:16) <DropdownMenu>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (193:12) <Dropdown direction="up">
+    // (195:12) <Dropdown direction="up">
     function create_default_slot_7$2(ctx) {
     	let dropdowntoggle;
     	let t;
@@ -32314,14 +32314,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$2.name,
     		type: "slot",
-    		source: "(193:12) <Dropdown direction=\\\"up\\\">",
+    		source: "(195:12) <Dropdown direction=\\\"up\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (206:12) <Button                  class="remove button"                  color="secondary"                  on:click={modifyToggle}>
+    // (208:12) <Button                  class="remove button"                  color="secondary"                  on:click={modifyToggle}>
     function create_default_slot_6$2(ctx) {
     	let t;
 
@@ -32341,14 +32341,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$2.name,
     		type: "slot",
-    		source: "(206:12) <Button                  class=\\\"remove button\\\"                  color=\\\"secondary\\\"                  on:click={modifyToggle}>",
+    		source: "(208:12) <Button                  class=\\\"remove button\\\"                  color=\\\"secondary\\\"                  on:click={modifyToggle}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (211:12) <Button                  class="remove button"                  color="secondary"                  on:click={del(introduce, toggle)}>
+    // (213:12) <Button                  class="remove button"                  color="secondary"                  on:click={del(introduce, toggle)}>
     function create_default_slot_5$2(ctx) {
     	let t;
 
@@ -32368,14 +32368,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$2.name,
     		type: "slot",
-    		source: "(211:12) <Button                  class=\\\"remove button\\\"                  color=\\\"secondary\\\"                  on:click={del(introduce, toggle)}>",
+    		source: "(213:12) <Button                  class=\\\"remove button\\\"                  color=\\\"secondary\\\"                  on:click={del(introduce, toggle)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (188:12) <Button                  class="apply button"                  color="primary"                  on:click={create(introduce, toggle)}>
+    // (190:12) <Button                  class="apply button"                  color="primary"                  on:click={create(introduce, toggle)}>
     function create_default_slot_4$2(ctx) {
     	let t;
 
@@ -32395,14 +32395,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(188:12) <Button                  class=\\\"apply button\\\"                  color=\\\"primary\\\"                  on:click={create(introduce, toggle)}>",
+    		source: "(190:12) <Button                  class=\\\"apply button\\\"                  color=\\\"primary\\\"                  on:click={create(introduce, toggle)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (179:12) <Button                  class="apply button"                  color="primary"                  on:click={update(introduce, modifyToggle)}>
+    // (181:12) <Button                  class="apply button"                  color="primary"                  on:click={update(introduce, modifyToggle)}>
     function create_default_slot_3$3(ctx) {
     	let t;
 
@@ -32422,14 +32422,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$3.name,
     		type: "slot",
-    		source: "(179:12) <Button                  class=\\\"apply button\\\"                  color=\\\"primary\\\"                  on:click={update(introduce, modifyToggle)}>",
+    		source: "(181:12) <Button                  class=\\\"apply button\\\"                  color=\\\"primary\\\"                  on:click={update(introduce, modifyToggle)}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (184:12) <Button class="cancel button" color="primary" on:click={cancel}                  >
+    // (186:12) <Button class="cancel button" color="primary" on:click={cancel}                  >
     function create_default_slot_2$3(ctx) {
     	let t;
 
@@ -32449,14 +32449,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$3.name,
     		type: "slot",
-    		source: "(184:12) <Button class=\\\"cancel button\\\" color=\\\"primary\\\" on:click={cancel}                  >",
+    		source: "(186:12) <Button class=\\\"cancel button\\\" color=\\\"primary\\\" on:click={cancel}                  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (177:4) <ModalFooter>
+    // (179:4) <ModalFooter>
     function create_default_slot_1$3(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -32531,14 +32531,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$3.name,
     		type: "slot",
-    		source: "(177:4) <ModalFooter>",
+    		source: "(179:4) <ModalFooter>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (147:0) <Modal isOpen={showModal} on:open={resize} on:close={func} fullscreen {toggle}>
+    // (149:0) <Modal isOpen={showModal} on:open={resize} on:close={func} fullscreen {toggle}>
     function create_default_slot$3(ctx) {
     	let modalheader;
     	let t0;
@@ -32637,7 +32637,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(147:0) <Modal isOpen={showModal} on:open={resize} on:close={func} fullscreen {toggle}>",
+    		source: "(149:0) <Modal isOpen={showModal} on:open={resize} on:close={func} fullscreen {toggle}>",
     		ctx
     	});
 
@@ -32758,6 +32758,7 @@ var app = (function () {
     	};
 
     	const doLike = func => async () => {
+    		console.log(introduce);
     		const res = await axios.get($serverUrl + `/api/intro/like/${introduce._id}?` + lib.stringify({ uid: $uid }), { withCredentials: true });
     		console.log(res);
     		if (!res.data == "ok") return alert("잠시 후 다시 시도해주세요.");
@@ -32765,6 +32766,7 @@ var app = (function () {
     	};
 
     	const unLike = func => async () => {
+    		console.log(introduce);
     		const res = await axios.get($serverUrl + `/api/intro/unlike/${introduce._id}?` + lib.stringify({ uid: $uid }), { withCredentials: true });
     		console.log(res);
     		if (!res.data == "ok") return alert("잠시 후 다시 시도해주세요.");
