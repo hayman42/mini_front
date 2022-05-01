@@ -87,7 +87,7 @@
     let tempTitle = title;
     $: source = marked(text);
     export let modifyMode = false;
-    let isOwner = true;
+    let isOwner = false;
     $: likeN = 0 + isLike;
     let isLike = false;
     const modifyToggle = () => {
@@ -111,7 +111,11 @@
     const checkUser = () => {
         console.log(document.cookie);
         console.log(introduce.user._id);
-        if (parseCookie(document.cookie) === introduce.user._id) isOwner = true;
+        let uid = parseCookie(document.cookie).uid.substring(3);
+        console.log(uid);
+        uid = uid.substring(0, uid.length - 1);
+        console.log(uid);
+        if (uid === introduce.user._id) isOwner = true;
     };
 
     const goTarget = (e) => {

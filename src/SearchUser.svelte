@@ -14,7 +14,37 @@
         CardTitle,
     } from "sveltestrap";
     import { Col, Container, Row } from "sveltestrap";
-    let str = "사용자 명을 입력하세요";
+    import { onMount } from "svelte";
+    import { Modal, ModalHeader, ModalBody } from "sveltestrap";
+
+    import IntroduceModal from "./IntroduceModal.svelte";
+    import axios from "axios";
+    import { serverUrl } from "./store";
+    let result = {};
+    let opens = {};
+    onMount(async () => {
+        const res = await axios.get($serverUrl + "/api/intro/myintro", {
+            withCredentials: true,
+        });
+        res.data.forEach((intro) => {
+            if (!result[intro.user.nickname]) result[intro.user.nickname] = [];
+            result[intro.user.nickname] = [
+                ...result[intro.user.nickname],
+                intro,
+            ];
+        });
+        console.log(result);
+        // introList.forEach((intro) => {
+        //     opens[intro._id] = false;
+        // });
+        // console.log(res.data);
+    });
+
+    const toggle = (e) => {
+        opens[e.target.value] = !opens[e.target.value];
+        opens = { ...opens };
+        console.log(opens);
+    };
 </script>
 
 <!-- <Accordion>
@@ -41,47 +71,44 @@
     </Col>
 
     <Col xs="9">
-        <div class="p-3 mb-3 bg-main marg">
-            <div class="card-username">유저1(이름)</div>
+        {#each Object.keys(result) as name}
+            <div class="p-3 mb-3 bg-main marg">
+                <div class="card-username">{name}</div>
 
-            <div class="scroll-item">
-                <Toast>
-                    <ToastHeader>CARD1</ToastHeader>
-                    <ToastBody>card1 상세내용</ToastBody>
-                </Toast>
-
-                <Toast class="me-1">
-                    <ToastHeader>CARD2</ToastHeader>
-                    <ToastBody>card2 상세내용</ToastBody>
-                </Toast>
-
-                <Toast class="me-1">
-                    <ToastHeader>CARD3</ToastHeader>
-                    <ToastBody>card3 상세내용</ToastBody>
-                </Toast>
+                <div class="scroll-item">
+                    {#each result[name] as intro}
+                        <Card class="mb-3">
+                            <CardHeader>
+                                <CardTitle>{intro.title}</CardTitle>
+                            </CardHeader>
+                            <CardBody>
+                                <CardSubtitle
+                                    >{new Date(intro.createdAt)
+                                        .toString()
+                                        .substring(
+                                            0,
+                                            new Date(intro.createdAt).toString()
+                                                .length - 17
+                                        )}
+                                </CardSubtitle>
+                                <CardText>
+                                    {intro.text}
+                                </CardText>
+                            </CardBody>
+                            <CardFooter>
+                                <Button on:click={toggle} value={intro._id}
+                                    >상세보기</Button
+                                >
+                                <IntroduceModal
+                                    showModal={opens[intro._id]}
+                                    introduce={intro}
+                                />
+                            </CardFooter>
+                        </Card>
+                    {/each}
+                </div>
             </div>
-        </div>
-
-        <div class="p-3 mb-3 bg-main marg">
-            <div class="card-username">유저2(이름)</div>
-
-            <div class="scroll-item">
-                <Toast>
-                    <ToastHeader>CARD1</ToastHeader>
-                    <ToastBody>card1 상세내용</ToastBody>
-                </Toast>
-
-                <Toast class="me-1">
-                    <ToastHeader>CARD2</ToastHeader>
-                    <ToastBody>card2 상세내용</ToastBody>
-                </Toast>
-
-                <Toast class="me-1">
-                    <ToastHeader>CARD3</ToastHeader>
-                    <ToastBody>card3 상세내용</ToastBody>
-                </Toast>
-            </div>
-        </div>
+        {/each}
     </Col>
 </Row>
 
