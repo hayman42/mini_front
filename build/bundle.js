@@ -31417,7 +31417,7 @@ var app = (function () {
     			h1 = element("h1");
     			t = text(/*title*/ ctx[7]);
     			attr_dev(h1, "class", "svelte-6llzvk");
-    			add_location(h1, file$3, 151, 12, 4414);
+    			add_location(h1, file$3, 151, 12, 4392);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -31452,7 +31452,7 @@ var app = (function () {
     		c: function create() {
     			textarea = element("textarea");
     			attr_dev(textarea, "class", "title");
-    			add_location(textarea, file$3, 149, 12, 4338);
+    			add_location(textarea, file$3, 149, 12, 4316);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -31549,9 +31549,9 @@ var app = (function () {
     			div = element("div");
     			textarea = element("textarea");
     			attr_dev(textarea, "class", "markdown-editor__source");
-    			add_location(textarea, file$3, 158, 20, 4646);
+    			add_location(textarea, file$3, 158, 20, 4624);
     			attr_dev(div, "class", "markdown-editor__left-panel");
-    			add_location(div, file$3, 157, 16, 4583);
+    			add_location(div, file$3, 157, 16, 4561);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -31605,11 +31605,11 @@ var app = (function () {
     			attr_dev(div0, "oncontextmenu", "return false");
     			attr_dev(div0, "ondragstart", "return false");
     			attr_dev(div0, "onselectstart", "return false");
-    			add_location(div0, file$3, 165, 16, 4896);
+    			add_location(div0, file$3, 165, 16, 4874);
     			attr_dev(div1, "class", "markdown-editor__right-panel");
-    			add_location(div1, file$3, 164, 12, 4836);
+    			add_location(div1, file$3, 164, 12, 4814);
     			attr_dev(div2, "class", "markdown-editor");
-    			add_location(div2, file$3, 155, 8, 4492);
+    			add_location(div2, file$3, 155, 8, 4470);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -31668,10 +31668,10 @@ var app = (function () {
 
     	button.$on("click", function () {
     		if (is_function(/*isLike*/ ctx[6]
-    		? /*unLike*/ ctx[15](/*introduce*/ ctx[4], /*toggleLike*/ ctx[20])
-    		: /*doLike*/ ctx[14](/*introduce*/ ctx[4], /*toggleLike*/ ctx[20]))) (/*isLike*/ ctx[6]
-    		? /*unLike*/ ctx[15](/*introduce*/ ctx[4], /*toggleLike*/ ctx[20])
-    		: /*doLike*/ ctx[14](/*introduce*/ ctx[4], /*toggleLike*/ ctx[20])).apply(this, arguments);
+    		? /*unLike*/ ctx[15](/*toggleLike*/ ctx[20])
+    		: /*doLike*/ ctx[14](/*toggleLike*/ ctx[20]))) (/*isLike*/ ctx[6]
+    		? /*unLike*/ ctx[15](/*toggleLike*/ ctx[20])
+    		: /*doLike*/ ctx[14](/*toggleLike*/ ctx[20])).apply(this, arguments);
     	});
 
     	const block = {
@@ -31987,7 +31987,7 @@ var app = (function () {
     	return block;
     }
 
-    // (217:12) <Button                  class="like button"                  color="primary"                  on:click={isLike                      ? unLike(introduce, toggleLike)                      : doLike(introduce, toggleLike)}>
+    // (217:12) <Button                  class="like button"                  color="primary"                  on:click={isLike ? unLike(toggleLike) : doLike(toggleLike)}                  >
     function create_default_slot_11$2(ctx) {
     	let t0;
     	let t1;
@@ -32014,7 +32014,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$2.name,
     		type: "slot",
-    		source: "(217:12) <Button                  class=\\\"like button\\\"                  color=\\\"primary\\\"                  on:click={isLike                      ? unLike(introduce, toggleLike)                      : doLike(introduce, toggleLike)}>",
+    		source: "(217:12) <Button                  class=\\\"like button\\\"                  color=\\\"primary\\\"                  on:click={isLike ? unLike(toggleLike) : doLike(toggleLike)}                  >",
     		ctx
     	});
 
@@ -32757,14 +32757,14 @@ var app = (function () {
     		func();
     	};
 
-    	const doLike = (introduce, func) => async () => {
+    	const doLike = func => async () => {
     		const res = await axios.get($serverUrl + `/api/intro/like/${introduce._id}?` + lib.stringify({ uid: $uid }), { withCredentials: true });
     		console.log(res);
     		if (!res.data == "ok") return alert("잠시 후 다시 시도해주세요.");
     		func();
     	};
 
-    	const unLike = (introduce, func) => async () => {
+    	const unLike = func => async () => {
     		const res = await axios.get($serverUrl + `/api/intro/unlike/${introduce._id}?` + lib.stringify({ uid: $uid }), { withCredentials: true });
     		console.log(res);
     		if (!res.data == "ok") return alert("잠시 후 다시 시도해주세요.");
