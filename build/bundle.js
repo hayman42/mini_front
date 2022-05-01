@@ -33960,7 +33960,7 @@ var app = (function () {
     			div = element("div");
     			create_component(input.$$.fragment);
     			attr_dev(div, "class", "input-name svelte-1ayj6f9");
-    			add_location(div, file$1, 93, 4, 2942);
+    			add_location(div, file$1, 93, 4, 2941);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -35360,11 +35360,11 @@ var app = (function () {
 
     			t2 = space();
     			attr_dev(div0, "class", "card-username svelte-1ayj6f9");
-    			add_location(div0, file$1, 131, 20, 4172);
+    			add_location(div0, file$1, 131, 20, 4171);
     			attr_dev(div1, "class", "scroll-item svelte-1ayj6f9");
-    			add_location(div1, file$1, 132, 20, 4233);
+    			add_location(div1, file$1, 132, 20, 4232);
     			attr_dev(div2, "class", "p-3 mb-3 bg-main marg svelte-1ayj6f9");
-    			add_location(div2, file$1, 130, 16, 4115);
+    			add_location(div2, file$1, 130, 16, 4114);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -35761,7 +35761,7 @@ var app = (function () {
     	// console.log(res.data);
 
     	const toggle = e => {
-    		if (e.target.value === -1) return console.log($$invalidate(2, createModalOpen = !createModalOpen));
+    		if (e.target.value == -1) return console.log($$invalidate(2, createModalOpen = !createModalOpen));
     		$$invalidate(1, opens[e.target.value] = !opens[e.target.value], opens);
     		$$invalidate(1, opens = { ...opens });
     		console.log(opens);
