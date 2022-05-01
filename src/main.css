@@ -1,0 +1,13 @@
+.toast{
+    display: inline-block;
+}
+
+.bg-mainColor {
+    background-color: #013328;
+    color: #013328;
+}
+
+.marg {
+    margin: 15px;
+}
+
