@@ -10,10 +10,11 @@
     import axios from "axios";
     import qs from "qs";
 
+    export let serverUrl;
     let userid, nickname, age, gender;
     onMount(async () => {
         let info = (
-            await axios.get("https://localhost:5000/api/user/info", {
+            await axios.get(serverUrl + "/api/user/info", {
                 withCredentials: true,
             })
         ).data;
