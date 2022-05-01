@@ -23,9 +23,17 @@
     {#if isLoggedIn}
         <Myintro />
     {:else}
-        <Image alt="Landscape" src="./logo.png" style="width:25%;height:25%" />
-        <br />
-        <Button on:click={toggle}>Get Started</Button>
+        <div style="height: 100px" />
+        <img src="/logo1.png" alt="logo" />
+        <div style="height: 50px" />
+        <Button
+            type="button"
+            on:click={toggle}
+            style="height: 40px;background-color: #013328;border-radius: 10%;"
+            class="btn btn-link"
+        >
+            <a style="color: #E3DCD2"> Sign In / Sign Up</a>
+        </Button>
         <Modal isOpen={open} {toggle}>
             <ModalHeader {toggle}>로그인을 하여 시작하세요.</ModalHeader>
             <ModalBody>
@@ -34,3 +42,27 @@
         </Modal>
     {/if}
 </main>
+
+<style>
+    main {
+        text-align: center;
+        background-color: #e3dcd2;
+        width: 100%;
+        height: 100%;
+    }
+    a {
+        text-decoration: none;
+    }
+    button {
+        height: 40px;
+        background-color: #013328;
+        border-radius: 10%;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        width: 200px;
+        height: auto;
+    }
+</style>
