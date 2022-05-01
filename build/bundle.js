@@ -31227,7 +31227,7 @@ var app = (function () {
     			h1 = element("h1");
     			t = text(/*title*/ ctx[7]);
     			attr_dev(h1, "class", "svelte-6llzvk");
-    			add_location(h1, file$3, 149, 12, 4379);
+    			add_location(h1, file$3, 149, 12, 4393);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -31262,7 +31262,7 @@ var app = (function () {
     		c: function create() {
     			textarea = element("textarea");
     			attr_dev(textarea, "class", "title");
-    			add_location(textarea, file$3, 147, 12, 4303);
+    			add_location(textarea, file$3, 147, 12, 4317);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -31359,9 +31359,9 @@ var app = (function () {
     			div = element("div");
     			textarea = element("textarea");
     			attr_dev(textarea, "class", "markdown-editor__source");
-    			add_location(textarea, file$3, 156, 20, 4611);
+    			add_location(textarea, file$3, 156, 20, 4625);
     			attr_dev(div, "class", "markdown-editor__left-panel");
-    			add_location(div, file$3, 155, 16, 4548);
+    			add_location(div, file$3, 155, 16, 4562);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -31415,11 +31415,11 @@ var app = (function () {
     			attr_dev(div0, "oncontextmenu", "return false");
     			attr_dev(div0, "ondragstart", "return false");
     			attr_dev(div0, "onselectstart", "return false");
-    			add_location(div0, file$3, 163, 16, 4861);
+    			add_location(div0, file$3, 163, 16, 4875);
     			attr_dev(div1, "class", "markdown-editor__right-panel");
-    			add_location(div1, file$3, 162, 12, 4801);
+    			add_location(div1, file$3, 162, 12, 4815);
     			attr_dev(div2, "class", "markdown-editor");
-    			add_location(div2, file$3, 153, 8, 4457);
+    			add_location(div2, file$3, 153, 8, 4471);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -32618,7 +32618,7 @@ var app = (function () {
     		// console.log(uid);
     		// uid = uid.substring(0, uid.length - 1);
     		// console.log(uid);
-    		if ($uid === introduce.user._id) $$invalidate(8, isOwner = true);
+    		if (createMode || $uid === introduce.user._id) $$invalidate(8, isOwner = true);
     	};
 
     	const goTarget = e => {
