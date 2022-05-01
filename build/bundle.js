@@ -26984,7 +26984,7 @@ var app = (function () {
     const { console: console_1$3 } = globals;
     const file$4 = "src\\Signin.svelte";
 
-    // (62:12) <InputGroupText>
+    // (66:12) <InputGroupText>
     function create_default_slot_19$1(ctx) {
     	let t;
 
@@ -27004,18 +27004,19 @@ var app = (function () {
     		block,
     		id: create_default_slot_19$1.name,
     		type: "slot",
-    		source: "(62:12) <InputGroupText>",
+    		source: "(66:12) <InputGroupText>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (61:8) <InputGroup>
+    // (65:8) <InputGroup>
     function create_default_slot_18$1(ctx) {
     	let inputgrouptext;
     	let t;
     	let input;
+    	let updating_value;
     	let current;
 
     	inputgrouptext = new InputGroupText({
@@ -27026,10 +27027,18 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	input = new Input({
-    			props: { id: "userid", placeholder: "ID" },
-    			$$inline: true
-    		});
+    	function input_value_binding(value) {
+    		/*input_value_binding*/ ctx[9](value);
+    	}
+
+    	let input_props = { id: "loginid", placeholder: "ID" };
+
+    	if (/*userid*/ ctx[0] !== void 0) {
+    		input_props.value = /*userid*/ ctx[0];
+    	}
+
+    	input = new Input({ props: input_props, $$inline: true });
+    	binding_callbacks.push(() => bind$1(input, 'value', input_value_binding));
 
     	const block = {
     		c: function create() {
@@ -27046,11 +27055,20 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const inputgrouptext_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 262144) {
     				inputgrouptext_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgrouptext.$set(inputgrouptext_changes);
+    			const input_changes = {};
+
+    			if (!updating_value && dirty & /*userid*/ 1) {
+    				updating_value = true;
+    				input_changes.value = /*userid*/ ctx[0];
+    				add_flush_callback(() => updating_value = false);
+    			}
+
+    			input.$set(input_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -27074,14 +27092,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18$1.name,
     		type: "slot",
-    		source: "(61:8) <InputGroup>",
+    		source: "(65:8) <InputGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (67:12) <InputGroupText>
+    // (71:12) <InputGroupText>
     function create_default_slot_17$1(ctx) {
     	let t;
 
@@ -27101,18 +27119,19 @@ var app = (function () {
     		block,
     		id: create_default_slot_17$1.name,
     		type: "slot",
-    		source: "(67:12) <InputGroupText>",
+    		source: "(71:12) <InputGroupText>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (66:8) <InputGroup>
+    // (70:8) <InputGroup>
     function create_default_slot_16$1(ctx) {
     	let inputgrouptext;
     	let t;
     	let input;
+    	let updating_value;
     	let current;
 
     	inputgrouptext = new InputGroupText({
@@ -27123,14 +27142,22 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	input = new Input({
-    			props: {
-    				id: "password",
-    				type: "password",
-    				placeholder: "password"
-    			},
-    			$$inline: true
-    		});
+    	function input_value_binding_1(value) {
+    		/*input_value_binding_1*/ ctx[10](value);
+    	}
+
+    	let input_props = {
+    		id: "loginpassword",
+    		type: "password",
+    		placeholder: "password"
+    	};
+
+    	if (/*password*/ ctx[1] !== void 0) {
+    		input_props.value = /*password*/ ctx[1];
+    	}
+
+    	input = new Input({ props: input_props, $$inline: true });
+    	binding_callbacks.push(() => bind$1(input, 'value', input_value_binding_1));
 
     	const block = {
     		c: function create() {
@@ -27147,11 +27174,20 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const inputgrouptext_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 262144) {
     				inputgrouptext_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgrouptext.$set(inputgrouptext_changes);
+    			const input_changes = {};
+
+    			if (!updating_value && dirty & /*password*/ 2) {
+    				updating_value = true;
+    				input_changes.value = /*password*/ ctx[1];
+    				add_flush_callback(() => updating_value = false);
+    			}
+
+    			input.$set(input_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -27175,14 +27211,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16$1.name,
     		type: "slot",
-    		source: "(66:8) <InputGroup>",
+    		source: "(70:8) <InputGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (71:8) <Button on:click={handleSignin}>
+    // (80:8) <Button on:click={handleSignin}>
     function create_default_slot_15$1(ctx) {
     	let t;
 
@@ -27202,14 +27238,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15$1.name,
     		type: "slot",
-    		source: "(71:8) <Button on:click={handleSignin}>",
+    		source: "(80:8) <Button on:click={handleSignin}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (59:4) <TabPane tabId="signin" tab="Sign In" active>
+    // (63:4) <TabPane tabId="signin" tab="Sign In" active>
     function create_default_slot_14$1(ctx) {
     	let br0;
     	let t0;
@@ -27248,7 +27284,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button.$on("click", /*handleSignin*/ ctx[0]);
+    	button.$on("click", /*handleSignin*/ ctx[5]);
 
     	const block = {
     		c: function create() {
@@ -27263,9 +27299,9 @@ var app = (function () {
     			br2 = element("br");
     			t4 = space();
     			create_component(button.$$.fragment);
-    			add_location(br0, file$4, 59, 8, 1725);
-    			add_location(br1, file$4, 64, 8, 1887);
-    			add_location(br2, file$4, 69, 8, 2079);
+    			add_location(br0, file$4, 63, 8, 1809);
+    			add_location(br1, file$4, 68, 8, 1992);
+    			add_location(br2, file$4, 78, 8, 2292);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br0, anchor);
@@ -27284,21 +27320,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const inputgroup0_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope, userid*/ 262145) {
     				inputgroup0_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgroup0.$set(inputgroup0_changes);
     			const inputgroup1_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope, password*/ 262146) {
     				inputgroup1_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgroup1.$set(inputgroup1_changes);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 262144) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -27336,14 +27372,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14$1.name,
     		type: "slot",
-    		source: "(59:4) <TabPane tabId=\\\"signin\\\" tab=\\\"Sign In\\\" active>",
+    		source: "(63:4) <TabPane tabId=\\\"signin\\\" tab=\\\"Sign In\\\" active>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (76:12) <InputGroupText>
+    // (85:12) <InputGroupText>
     function create_default_slot_13$3(ctx) {
     	let t;
 
@@ -27363,18 +27399,19 @@ var app = (function () {
     		block,
     		id: create_default_slot_13$3.name,
     		type: "slot",
-    		source: "(76:12) <InputGroupText>",
+    		source: "(85:12) <InputGroupText>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (75:8) <InputGroup>
+    // (84:8) <InputGroup>
     function create_default_slot_12$3(ctx) {
     	let inputgrouptext;
     	let t;
     	let input;
+    	let updating_value;
     	let current;
 
     	inputgrouptext = new InputGroupText({
@@ -27385,10 +27422,18 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	input = new Input({
-    			props: { id: "userid", placeholder: "ID" },
-    			$$inline: true
-    		});
+    	function input_value_binding_2(value) {
+    		/*input_value_binding_2*/ ctx[11](value);
+    	}
+
+    	let input_props = { id: "userid", placeholder: "ID" };
+
+    	if (/*userid*/ ctx[0] !== void 0) {
+    		input_props.value = /*userid*/ ctx[0];
+    	}
+
+    	input = new Input({ props: input_props, $$inline: true });
+    	binding_callbacks.push(() => bind$1(input, 'value', input_value_binding_2));
 
     	const block = {
     		c: function create() {
@@ -27405,11 +27450,20 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const inputgrouptext_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 262144) {
     				inputgrouptext_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgrouptext.$set(inputgrouptext_changes);
+    			const input_changes = {};
+
+    			if (!updating_value && dirty & /*userid*/ 1) {
+    				updating_value = true;
+    				input_changes.value = /*userid*/ ctx[0];
+    				add_flush_callback(() => updating_value = false);
+    			}
+
+    			input.$set(input_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -27433,14 +27487,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12$3.name,
     		type: "slot",
-    		source: "(75:8) <InputGroup>",
+    		source: "(84:8) <InputGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (81:12) <InputGroupText>
+    // (90:12) <InputGroupText>
     function create_default_slot_11$3(ctx) {
     	let t;
 
@@ -27460,18 +27514,19 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$3.name,
     		type: "slot",
-    		source: "(81:12) <InputGroupText>",
+    		source: "(90:12) <InputGroupText>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (80:8) <InputGroup>
+    // (89:8) <InputGroup>
     function create_default_slot_10$3(ctx) {
     	let inputgrouptext;
     	let t;
     	let input;
+    	let updating_value;
     	let current;
 
     	inputgrouptext = new InputGroupText({
@@ -27482,14 +27537,22 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	input = new Input({
-    			props: {
-    				id: "password",
-    				type: "password",
-    				placeholder: "password"
-    			},
-    			$$inline: true
-    		});
+    	function input_value_binding_3(value) {
+    		/*input_value_binding_3*/ ctx[12](value);
+    	}
+
+    	let input_props = {
+    		id: "password",
+    		type: "password",
+    		placeholder: "password"
+    	};
+
+    	if (/*password*/ ctx[1] !== void 0) {
+    		input_props.value = /*password*/ ctx[1];
+    	}
+
+    	input = new Input({ props: input_props, $$inline: true });
+    	binding_callbacks.push(() => bind$1(input, 'value', input_value_binding_3));
 
     	const block = {
     		c: function create() {
@@ -27506,11 +27569,20 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const inputgrouptext_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 262144) {
     				inputgrouptext_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgrouptext.$set(inputgrouptext_changes);
+    			const input_changes = {};
+
+    			if (!updating_value && dirty & /*password*/ 2) {
+    				updating_value = true;
+    				input_changes.value = /*password*/ ctx[1];
+    				add_flush_callback(() => updating_value = false);
+    			}
+
+    			input.$set(input_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -27534,14 +27606,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$3.name,
     		type: "slot",
-    		source: "(80:8) <InputGroup>",
+    		source: "(89:8) <InputGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (86:12) <InputGroupText>
+    // (100:12) <InputGroupText>
     function create_default_slot_9$3(ctx) {
     	let t;
 
@@ -27561,18 +27633,19 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$3.name,
     		type: "slot",
-    		source: "(86:12) <InputGroupText>",
+    		source: "(100:12) <InputGroupText>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (85:8) <InputGroup>
+    // (99:8) <InputGroup>
     function create_default_slot_8$3(ctx) {
     	let inputgrouptext;
     	let t;
     	let input;
+    	let updating_value;
     	let current;
 
     	inputgrouptext = new InputGroupText({
@@ -27583,10 +27656,18 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	input = new Input({
-    			props: { id: "nickname", placeholder: "nicknname" },
-    			$$inline: true
-    		});
+    	function input_value_binding_4(value) {
+    		/*input_value_binding_4*/ ctx[13](value);
+    	}
+
+    	let input_props = { id: "nickname", placeholder: "nicknname" };
+
+    	if (/*nickname*/ ctx[2] !== void 0) {
+    		input_props.value = /*nickname*/ ctx[2];
+    	}
+
+    	input = new Input({ props: input_props, $$inline: true });
+    	binding_callbacks.push(() => bind$1(input, 'value', input_value_binding_4));
 
     	const block = {
     		c: function create() {
@@ -27603,11 +27684,20 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const inputgrouptext_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 262144) {
     				inputgrouptext_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgrouptext.$set(inputgrouptext_changes);
+    			const input_changes = {};
+
+    			if (!updating_value && dirty & /*nickname*/ 4) {
+    				updating_value = true;
+    				input_changes.value = /*nickname*/ ctx[2];
+    				add_flush_callback(() => updating_value = false);
+    			}
+
+    			input.$set(input_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -27631,14 +27721,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$3.name,
     		type: "slot",
-    		source: "(85:8) <InputGroup>",
+    		source: "(99:8) <InputGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (91:12) <InputGroupText>
+    // (109:12) <InputGroupText>
     function create_default_slot_7$3(ctx) {
     	let t;
 
@@ -27658,18 +27748,19 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$3.name,
     		type: "slot",
-    		source: "(91:12) <InputGroupText>",
+    		source: "(109:12) <InputGroupText>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (90:8) <InputGroup>
+    // (108:8) <InputGroup>
     function create_default_slot_6$3(ctx) {
     	let inputgrouptext;
     	let t;
     	let input;
+    	let updating_value;
     	let current;
 
     	inputgrouptext = new InputGroupText({
@@ -27680,10 +27771,18 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	input = new Input({
-    			props: { id: "age", placeholder: "age" },
-    			$$inline: true
-    		});
+    	function input_value_binding_5(value) {
+    		/*input_value_binding_5*/ ctx[14](value);
+    	}
+
+    	let input_props = { id: "age", placeholder: "age" };
+
+    	if (/*age*/ ctx[3] !== void 0) {
+    		input_props.value = /*age*/ ctx[3];
+    	}
+
+    	input = new Input({ props: input_props, $$inline: true });
+    	binding_callbacks.push(() => bind$1(input, 'value', input_value_binding_5));
 
     	const block = {
     		c: function create() {
@@ -27700,11 +27799,20 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const inputgrouptext_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 262144) {
     				inputgrouptext_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgrouptext.$set(inputgrouptext_changes);
+    			const input_changes = {};
+
+    			if (!updating_value && dirty & /*age*/ 8) {
+    				updating_value = true;
+    				input_changes.value = /*age*/ ctx[3];
+    				add_flush_callback(() => updating_value = false);
+    			}
+
+    			input.$set(input_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -27728,14 +27836,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$3.name,
     		type: "slot",
-    		source: "(90:8) <InputGroup>",
+    		source: "(108:8) <InputGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (96:12) <InputGroupText>
+    // (114:12) <InputGroupText>
     function create_default_slot_5$3(ctx) {
     	let t;
 
@@ -27755,14 +27863,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$3.name,
     		type: "slot",
-    		source: "(96:12) <InputGroupText>",
+    		source: "(114:12) <InputGroupText>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (97:12) <Input type="select" name="gender" id="gender">
+    // (115:12) <Input type="select" name="gender" id="gender" bind:value={gender}>
     function create_default_slot_4$3(ctx) {
     	let option0;
     	let t1;
@@ -27777,10 +27885,10 @@ var app = (function () {
     			option1.textContent = "여자";
     			option0.__value = "남자";
     			option0.value = option0.__value;
-    			add_location(option0, file$4, 97, 16, 3056);
+    			add_location(option0, file$4, 115, 16, 3515);
     			option1.__value = "여자";
     			option1.value = option1.__value;
-    			add_location(option1, file$4, 98, 16, 3093);
+    			add_location(option1, file$4, 116, 16, 3552);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option0, anchor);
@@ -27799,18 +27907,19 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$3.name,
     		type: "slot",
-    		source: "(97:12) <Input type=\\\"select\\\" name=\\\"gender\\\" id=\\\"gender\\\">",
+    		source: "(115:12) <Input type=\\\"select\\\" name=\\\"gender\\\" id=\\\"gender\\\" bind:value={gender}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (95:8) <InputGroup>
+    // (113:8) <InputGroup>
     function create_default_slot_3$4(ctx) {
     	let inputgrouptext;
     	let t;
     	let input;
+    	let updating_value;
     	let current;
 
     	inputgrouptext = new InputGroupText({
@@ -27821,16 +27930,24 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	input = new Input({
-    			props: {
-    				type: "select",
-    				name: "gender",
-    				id: "gender",
-    				$$slots: { default: [create_default_slot_4$3] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
+    	function input_value_binding_6(value) {
+    		/*input_value_binding_6*/ ctx[15](value);
+    	}
+
+    	let input_props = {
+    		type: "select",
+    		name: "gender",
+    		id: "gender",
+    		$$slots: { default: [create_default_slot_4$3] },
+    		$$scope: { ctx }
+    	};
+
+    	if (/*gender*/ ctx[4] !== void 0) {
+    		input_props.value = /*gender*/ ctx[4];
+    	}
+
+    	input = new Input({ props: input_props, $$inline: true });
+    	binding_callbacks.push(() => bind$1(input, 'value', input_value_binding_6));
 
     	const block = {
     		c: function create() {
@@ -27847,15 +27964,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const inputgrouptext_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 262144) {
     				inputgrouptext_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgrouptext.$set(inputgrouptext_changes);
     			const input_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 262144) {
     				input_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (!updating_value && dirty & /*gender*/ 16) {
+    				updating_value = true;
+    				input_changes.value = /*gender*/ ctx[4];
+    				add_flush_callback(() => updating_value = false);
     			}
 
     			input.$set(input_changes);
@@ -27882,14 +28005,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$4.name,
     		type: "slot",
-    		source: "(95:8) <InputGroup>",
+    		source: "(113:8) <InputGroup>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (103:8) <Button on:click={handleSignup}>
+    // (121:8) <Button on:click={handleSignup}>
     function create_default_slot_2$4(ctx) {
     	let t;
 
@@ -27909,14 +28032,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$4.name,
     		type: "slot",
-    		source: "(103:8) <Button on:click={handleSignup}>",
+    		source: "(121:8) <Button on:click={handleSignup}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:4) <TabPane tabId="signup" tab="Sign Up">
+    // (82:4) <TabPane tabId="signup" tab="Sign Up">
     function create_default_slot_1$4(ctx) {
     	let br0;
     	let t0;
@@ -27991,7 +28114,7 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	button.$on("click", /*handleSignup*/ ctx[1]);
+    	button.$on("click", /*handleSignup*/ ctx[6]);
 
     	const block = {
     		c: function create() {
@@ -28018,12 +28141,12 @@ var app = (function () {
     			br5 = element("br");
     			t10 = space();
     			create_component(button.$$.fragment);
-    			add_location(br0, file$4, 73, 8, 2209);
-    			add_location(br1, file$4, 78, 8, 2371);
-    			add_location(br2, file$4, 83, 8, 2563);
-    			add_location(br3, file$4, 88, 8, 2740);
-    			add_location(br4, file$4, 93, 8, 2900);
-    			add_location(br5, file$4, 101, 8, 3167);
+    			add_location(br0, file$4, 82, 8, 2422);
+    			add_location(br1, file$4, 87, 8, 2604);
+    			add_location(br2, file$4, 97, 8, 2899);
+    			add_location(br3, file$4, 106, 8, 3162);
+    			add_location(br4, file$4, 111, 8, 3339);
+    			add_location(br5, file$4, 119, 8, 3626);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br0, anchor);
@@ -28054,42 +28177,42 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const inputgroup0_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope, userid*/ 262145) {
     				inputgroup0_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgroup0.$set(inputgroup0_changes);
     			const inputgroup1_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope, password*/ 262146) {
     				inputgroup1_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgroup1.$set(inputgroup1_changes);
     			const inputgroup2_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope, nickname*/ 262148) {
     				inputgroup2_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgroup2.$set(inputgroup2_changes);
     			const inputgroup3_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope, age*/ 262152) {
     				inputgroup3_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgroup3.$set(inputgroup3_changes);
     			const inputgroup4_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope, gender*/ 262160) {
     				inputgroup4_changes.$$scope = { dirty, ctx };
     			}
 
     			inputgroup4.$set(inputgroup4_changes);
     			const button_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 262144) {
     				button_changes.$$scope = { dirty, ctx };
     			}
 
@@ -28145,14 +28268,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$4.name,
     		type: "slot",
-    		source: "(73:4) <TabPane tabId=\\\"signup\\\" tab=\\\"Sign Up\\\">",
+    		source: "(82:4) <TabPane tabId=\\\"signup\\\" tab=\\\"Sign Up\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (58:0) <TabContent>
+    // (62:0) <TabContent>
     function create_default_slot$4(ctx) {
     	let tabpane0;
     	let t;
@@ -28195,14 +28318,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const tabpane0_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope, password, userid*/ 262147) {
     				tabpane0_changes.$$scope = { dirty, ctx };
     			}
 
     			tabpane0.$set(tabpane0_changes);
     			const tabpane1_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope, gender, age, nickname, password, userid*/ 262175) {
     				tabpane1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -28230,7 +28353,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(58:0) <TabContent>",
+    		source: "(62:0) <TabContent>",
     		ctx
     	});
 
@@ -28263,7 +28386,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const tabcontent_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope, gender, age, nickname, password, userid*/ 262175) {
     				tabcontent_changes.$$scope = { dirty, ctx };
     			}
 
@@ -28298,13 +28421,18 @@ var app = (function () {
     	let $serverUrl;
     	let $uid;
     	validate_store(serverUrl, 'serverUrl');
-    	component_subscribe($$self, serverUrl, $$value => $$invalidate(4, $serverUrl = $$value));
+    	component_subscribe($$self, serverUrl, $$value => $$invalidate(16, $serverUrl = $$value));
     	validate_store(uid, 'uid');
-    	component_subscribe($$self, uid, $$value => $$invalidate(5, $uid = $$value));
+    	component_subscribe($$self, uid, $$value => $$invalidate(17, $uid = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Signin', slots, []);
     	let { isLoggedIn } = $$props;
     	let { serverMsg } = $$props;
+    	let userid;
+    	let password;
+    	let nickname;
+    	let age;
+    	let gender;
 
     	const handleSignin = async () => {
     		const ids = ["userid", "password"];
@@ -28322,10 +28450,10 @@ var app = (function () {
     			const fromServer = res.data;
 
     			if (fromServer.success) {
-    				$$invalidate(2, isLoggedIn = true);
+    				$$invalidate(7, isLoggedIn = true);
     				set_store_value(uid, $uid = fromServer.uid, $uid);
     			} else {
-    				$$invalidate(3, serverMsg = fromServer.message);
+    				$$invalidate(8, serverMsg = fromServer.message);
     			}
     		} catch(e) {
     			console.log(e);
@@ -28347,9 +28475,9 @@ var app = (function () {
     		const res = await axios.get($serverUrl + "/api/user/signup?" + lib.stringify(querys));
 
     		if (res.data.success) {
-    			$$invalidate(3, serverMsg = "회원가입 성공!");
+    			$$invalidate(8, serverMsg = "회원가입 성공!");
     		} else {
-    			$$invalidate(3, serverMsg = res.data.message);
+    			$$invalidate(8, serverMsg = res.data.message);
     		}
     	}
 
@@ -28359,9 +28487,44 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$3.warn(`<Signin> was created with unknown prop '${key}'`);
     	});
 
+    	function input_value_binding(value) {
+    		userid = value;
+    		$$invalidate(0, userid);
+    	}
+
+    	function input_value_binding_1(value) {
+    		password = value;
+    		$$invalidate(1, password);
+    	}
+
+    	function input_value_binding_2(value) {
+    		userid = value;
+    		$$invalidate(0, userid);
+    	}
+
+    	function input_value_binding_3(value) {
+    		password = value;
+    		$$invalidate(1, password);
+    	}
+
+    	function input_value_binding_4(value) {
+    		nickname = value;
+    		$$invalidate(2, nickname);
+    	}
+
+    	function input_value_binding_5(value) {
+    		age = value;
+    		$$invalidate(3, age);
+    	}
+
+    	function input_value_binding_6(value) {
+    		gender = value;
+    		$$invalidate(4, gender);
+    	}
+
     	$$self.$$set = $$props => {
-    		if ('isLoggedIn' in $$props) $$invalidate(2, isLoggedIn = $$props.isLoggedIn);
-    		if ('serverMsg' in $$props) $$invalidate(3, serverMsg = $$props.serverMsg);
+    		if ('isLoggedIn' in $$props) $$invalidate(7, isLoggedIn = $$props.isLoggedIn);
+    		if ('serverMsg' in $$props) $$invalidate(8, serverMsg = $$props.serverMsg);
     	};
 
     	$$self.$capture_state = () => ({
@@ -28377,6 +28540,11 @@ var app = (function () {
     		axios,
     		isLoggedIn,
     		serverMsg,
+    		userid,
+    		password,
+    		nickname,
+    		age,
+    		gender,
     		handleSignin,
     		handleSignup,
     		$serverUrl,
@@ -28384,21 +28552,43 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('isLoggedIn' in $$props) $$invalidate(2, isLoggedIn = $$props.isLoggedIn);
-    		if ('serverMsg' in $$props) $$invalidate(3, serverMsg = $$props.serverMsg);
+    		if ('isLoggedIn' in $$props) $$invalidate(7, isLoggedIn = $$props.isLoggedIn);
+    		if ('serverMsg' in $$props) $$invalidate(8, serverMsg = $$props.serverMsg);
+    		if ('userid' in $$props) $$invalidate(0, userid = $$props.userid);
+    		if ('password' in $$props) $$invalidate(1, password = $$props.password);
+    		if ('nickname' in $$props) $$invalidate(2, nickname = $$props.nickname);
+    		if ('age' in $$props) $$invalidate(3, age = $$props.age);
+    		if ('gender' in $$props) $$invalidate(4, gender = $$props.gender);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [handleSignin, handleSignup, isLoggedIn, serverMsg];
+    	return [
+    		userid,
+    		password,
+    		nickname,
+    		age,
+    		gender,
+    		handleSignin,
+    		handleSignup,
+    		isLoggedIn,
+    		serverMsg,
+    		input_value_binding,
+    		input_value_binding_1,
+    		input_value_binding_2,
+    		input_value_binding_3,
+    		input_value_binding_4,
+    		input_value_binding_5,
+    		input_value_binding_6
+    	];
     }
 
     class Signin extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { isLoggedIn: 2, serverMsg: 3 });
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { isLoggedIn: 7, serverMsg: 8 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -28410,11 +28600,11 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*isLoggedIn*/ ctx[2] === undefined && !('isLoggedIn' in props)) {
+    		if (/*isLoggedIn*/ ctx[7] === undefined && !('isLoggedIn' in props)) {
     			console_1$3.warn("<Signin> was created without expected prop 'isLoggedIn'");
     		}
 
-    		if (/*serverMsg*/ ctx[3] === undefined && !('serverMsg' in props)) {
+    		if (/*serverMsg*/ ctx[8] === undefined && !('serverMsg' in props)) {
     			console_1$3.warn("<Signin> was created without expected prop 'serverMsg'");
     		}
     	}
