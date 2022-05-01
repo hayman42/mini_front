@@ -34439,7 +34439,7 @@ var app = (function () {
 
     // (117:8) {#if viewMode == 0}
     function create_if_block$1(ctx) {
-    	let show_if = /*result*/ ctx[0][Object.keys(/*result*/ ctx[0])[0]].user._id === /*$uid*/ ctx[4];
+    	let show_if = /*result*/ ctx[0][Object.keys(/*result*/ ctx[0])[0]] && /*result*/ ctx[0][Object.keys(/*result*/ ctx[0])[0]].user._id === /*$uid*/ ctx[4];
     	let t;
     	let each_1_anchor;
     	let current;
@@ -34479,7 +34479,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*result, $uid*/ 17) show_if = /*result*/ ctx[0][Object.keys(/*result*/ ctx[0])[0]].user._id === /*$uid*/ ctx[4];
+    			if (dirty & /*result, $uid*/ 17) show_if = /*result*/ ctx[0][Object.keys(/*result*/ ctx[0])[0]] && /*result*/ ctx[0][Object.keys(/*result*/ ctx[0])[0]].user._id === /*$uid*/ ctx[4];
 
     			if (show_if) {
     				if (if_block) {
@@ -34571,7 +34571,7 @@ var app = (function () {
     	return block;
     }
 
-    // (118:12) {#if result[Object.keys(result)[0]].user._id === $uid}
+    // (118:12) {#if result[Object.keys(result)[0]] && result[Object.keys(result)[0]].user._id === $uid}
     function create_if_block_1$1(ctx) {
     	let button;
     	let t;
@@ -34659,7 +34659,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(118:12) {#if result[Object.keys(result)[0]].user._id === $uid}",
+    		source: "(118:12) {#if result[Object.keys(result)[0]] && result[Object.keys(result)[0]].user._id === $uid}",
     		ctx
     	});
 
@@ -35250,11 +35250,11 @@ var app = (function () {
 
     			t2 = space();
     			attr_dev(div0, "class", "card-username svelte-1ayj6f9");
-    			add_location(div0, file$1, 123, 20, 3822);
+    			add_location(div0, file$1, 123, 20, 3856);
     			attr_dev(div1, "class", "scroll-item svelte-1ayj6f9");
-    			add_location(div1, file$1, 124, 20, 3883);
+    			add_location(div1, file$1, 124, 20, 3917);
     			attr_dev(div2, "class", "p-3 mb-3 bg-main marg svelte-1ayj6f9");
-    			add_location(div2, file$1, 122, 16, 3765);
+    			add_location(div2, file$1, 122, 16, 3799);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
