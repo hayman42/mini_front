@@ -11905,7 +11905,7 @@ var app = (function () {
     	let current;
 
     	const if_block_creators = [
-    		create_if_block_3$2,
+    		create_if_block_3$3,
     		create_if_block_4$2,
     		create_if_block_5,
     		create_if_block_6,
@@ -13625,7 +13625,7 @@ var app = (function () {
     }
 
     // (94:2) {#if type === 'text'}
-    function create_if_block_3$2(ctx) {
+    function create_if_block_3$3(ctx) {
     	let input;
     	let mounted;
     	let dispose;
@@ -13702,7 +13702,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_3$2.name,
+    		id: create_if_block_3$3.name,
     		type: "if",
     		source: "(94:2) {#if type === 'text'}",
     		ctx
@@ -18218,7 +18218,7 @@ var app = (function () {
     	const external_slot_template = /*#slots*/ ctx[31].external;
     	const external_slot = create_slot(external_slot_template, ctx, /*$$scope*/ ctx[34], get_external_slot_context);
     	let if_block0 = /*header*/ ctx[3] && create_if_block_4$1(ctx);
-    	const if_block_creators = [create_if_block_3$1, create_else_block$5];
+    	const if_block_creators = [create_if_block_3$2, create_else_block$5];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -18560,7 +18560,7 @@ var app = (function () {
     }
 
     // (251:14) {#if body}
-    function create_if_block_3$1(ctx) {
+    function create_if_block_3$2(ctx) {
     	let modalbody;
     	let current;
 
@@ -18605,7 +18605,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_3$1.name,
+    		id: create_if_block_3$2.name,
     		type: "if",
     		source: "(251:14) {#if body}",
     		ctx
@@ -31348,7 +31348,7 @@ var app = (function () {
     }
 
     // (155:12) {#if modifyMode || createMode}
-    function create_if_block_3(ctx) {
+    function create_if_block_3$1(ctx) {
     	let div;
     	let textarea;
     	let mounted;
@@ -31387,7 +31387,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_3.name,
+    		id: create_if_block_3$1.name,
     		type: "if",
     		source: "(155:12) {#if modifyMode || createMode}",
     		ctx
@@ -31402,7 +31402,7 @@ var app = (function () {
     	let t;
     	let div1;
     	let div0;
-    	let if_block = (/*modifyMode*/ ctx[1] || /*createMode*/ ctx[3]) && create_if_block_3(ctx);
+    	let if_block = (/*modifyMode*/ ctx[1] || /*createMode*/ ctx[3]) && create_if_block_3$1(ctx);
 
     	const block = {
     		c: function create() {
@@ -31434,7 +31434,7 @@ var app = (function () {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
-    					if_block = create_if_block_3(ctx);
+    					if_block = create_if_block_3$1(ctx);
     					if_block.c();
     					if_block.m(div2, t);
     				}
@@ -33935,7 +33935,7 @@ var app = (function () {
     }
 
     // (92:0) {#if viewMode == 3}
-    function create_if_block_2(ctx) {
+    function create_if_block_3(ctx) {
     	let div;
     	let input;
     	let current;
@@ -33981,7 +33981,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_2.name,
+    		id: create_if_block_3.name,
     		type: "if",
     		source: "(92:0) {#if viewMode == 3}",
     		ctx
@@ -34568,8 +34568,8 @@ var app = (function () {
     	return block;
     }
 
-    // (171:32) 
-    function create_if_block_1$1(ctx) {
+    // (173:32) 
+    function create_if_block_2(ctx) {
     	let userinfo;
     	let current;
     	userinfo = new Userinfo({ $$inline: true });
@@ -34599,52 +34599,19 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$1.name,
+    		id: create_if_block_2.name,
     		type: "if",
-    		source: "(171:32) ",
+    		source: "(173:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (126:8) {#if viewMode == 0}
+    // (126:8) {#if viewMode == 0 || viewMode == 3}
     function create_if_block$1(ctx) {
-    	let button;
-    	let t0;
-    	let introducemodal;
-    	let updating_showModal;
-    	let t1;
     	let each_1_anchor;
     	let current;
-
-    	button = new Button({
-    			props: {
-    				value: -1,
-    				$$slots: { default: [create_default_slot_10] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	button.$on("click", /*toggle*/ ctx[5]);
-
-    	function introducemodal_showModal_binding(value) {
-    		/*introducemodal_showModal_binding*/ ctx[8](value);
-    	}
-
-    	let introducemodal_props = { createMode: true };
-
-    	if (/*createModalOpen*/ ctx[2] !== void 0) {
-    		introducemodal_props.showModal = /*createModalOpen*/ ctx[2];
-    	}
-
-    	introducemodal = new IntroduceModal({
-    			props: introducemodal_props,
-    			$$inline: true
-    		});
-
-    	binding_callbacks.push(() => bind$1(introducemodal, 'showModal', introducemodal_showModal_binding));
     	let each_value = Object.keys(/*result*/ ctx[0]);
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -34659,11 +34626,6 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			create_component(button.$$.fragment);
-    			t0 = space();
-    			create_component(introducemodal.$$.fragment);
-    			t1 = space();
-
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
@@ -34671,11 +34633,6 @@ var app = (function () {
     			each_1_anchor = empty();
     		},
     		m: function mount(target, anchor) {
-    			mount_component(button, target, anchor);
-    			insert_dev(target, t0, anchor);
-    			mount_component(introducemodal, target, anchor);
-    			insert_dev(target, t1, anchor);
-
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(target, anchor);
     			}
@@ -34684,24 +34641,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			const button_changes = {};
-
-    			if (dirty & /*$$scope*/ 1048576) {
-    				button_changes.$$scope = { dirty, ctx };
-    			}
-
-    			button.$set(button_changes);
-    			const introducemodal_changes = {};
-
-    			if (!updating_showModal && dirty & /*createModalOpen*/ 4) {
-    				updating_showModal = true;
-    				introducemodal_changes.showModal = /*createModalOpen*/ ctx[2];
-    				add_flush_callback(() => updating_showModal = false);
-    			}
-
-    			introducemodal.$set(introducemodal_changes);
-
-    			if (dirty & /*result, Object, getData, opens, toggle, Date*/ 51) {
+    			if (dirty & /*result, Object, getData, opens, toggle, Date, createModalOpen, viewMode*/ 63) {
     				each_value = Object.keys(/*result*/ ctx[0]);
     				validate_each_argument(each_value);
     				let i;
@@ -34731,8 +34671,6 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(button.$$.fragment, local);
-    			transition_in(introducemodal.$$.fragment, local);
 
     			for (let i = 0; i < each_value.length; i += 1) {
     				transition_in(each_blocks[i]);
@@ -34741,8 +34679,6 @@ var app = (function () {
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(button.$$.fragment, local);
-    			transition_out(introducemodal.$$.fragment, local);
     			each_blocks = each_blocks.filter(Boolean);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -34752,10 +34688,6 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			destroy_component(button, detaching);
-    			if (detaching) detach_dev(t0);
-    			destroy_component(introducemodal, detaching);
-    			if (detaching) detach_dev(t1);
     			destroy_each(each_blocks, detaching);
     			if (detaching) detach_dev(each_1_anchor);
     		}
@@ -34765,14 +34697,109 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(126:8) {#if viewMode == 0}",
+    		source: "(126:8) {#if viewMode == 0 || viewMode == 3}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (127:12) <Button on:click={toggle} value={-1}>
+    // (130:20) {#if viewMode == 0}
+    function create_if_block_1$1(ctx) {
+    	let button;
+    	let t;
+    	let introducemodal;
+    	let updating_showModal;
+    	let current;
+
+    	button = new Button({
+    			props: {
+    				value: -1,
+    				$$slots: { default: [create_default_slot_10] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	button.$on("click", /*toggle*/ ctx[5]);
+
+    	function introducemodal_showModal_binding(value) {
+    		/*introducemodal_showModal_binding*/ ctx[8](value);
+    	}
+
+    	let introducemodal_props = { createMode: true };
+
+    	if (/*createModalOpen*/ ctx[2] !== void 0) {
+    		introducemodal_props.showModal = /*createModalOpen*/ ctx[2];
+    	}
+
+    	introducemodal = new IntroduceModal({
+    			props: introducemodal_props,
+    			$$inline: true
+    		});
+
+    	binding_callbacks.push(() => bind$1(introducemodal, 'showModal', introducemodal_showModal_binding));
+
+    	const block = {
+    		c: function create() {
+    			create_component(button.$$.fragment);
+    			t = space();
+    			create_component(introducemodal.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(button, target, anchor);
+    			insert_dev(target, t, anchor);
+    			mount_component(introducemodal, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const button_changes = {};
+
+    			if (dirty & /*$$scope*/ 1048576) {
+    				button_changes.$$scope = { dirty, ctx };
+    			}
+
+    			button.$set(button_changes);
+    			const introducemodal_changes = {};
+
+    			if (!updating_showModal && dirty & /*createModalOpen*/ 4) {
+    				updating_showModal = true;
+    				introducemodal_changes.showModal = /*createModalOpen*/ ctx[2];
+    				add_flush_callback(() => updating_showModal = false);
+    			}
+
+    			introducemodal.$set(introducemodal_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(button.$$.fragment, local);
+    			transition_in(introducemodal.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(button.$$.fragment, local);
+    			transition_out(introducemodal.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(button, detaching);
+    			if (detaching) detach_dev(t);
+    			destroy_component(introducemodal, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$1.name,
+    		type: "if",
+    		source: "(130:20) {#if viewMode == 0}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (131:24) <Button on:click={toggle} value={-1}>
     function create_default_slot_10(ctx) {
     	let t;
 
@@ -34792,14 +34819,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(127:12) <Button on:click={toggle} value={-1}>",
+    		source: "(131:24) <Button on:click={toggle} value={-1}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (139:36) <CardTitle>
+    // (141:36) <CardTitle>
     function create_default_slot_9(ctx) {
     	let t_value = /*intro*/ ctx[17].title + "";
     	let t;
@@ -34823,14 +34850,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(139:36) <CardTitle>",
+    		source: "(141:36) <CardTitle>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (138:32) <CardHeader>
+    // (140:32) <CardHeader>
     function create_default_slot_8(ctx) {
     	let cardtitle;
     	let current;
@@ -34878,14 +34905,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(138:32) <CardHeader>",
+    		source: "(140:32) <CardHeader>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (142:36) <CardSubtitle                                          >
+    // (144:36) <CardSubtitle                                          >
     function create_default_slot_7(ctx) {
     	let t_value = new Date(/*intro*/ ctx[17].createdAt).toString().substring(0, new Date(/*intro*/ ctx[17].createdAt).toString().length - 17) + "";
     	let t;
@@ -34909,14 +34936,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(142:36) <CardSubtitle                                          >",
+    		source: "(144:36) <CardSubtitle                                          >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (152:36) <CardText>
+    // (154:36) <CardText>
     function create_default_slot_6(ctx) {
     	let t_value = /*intro*/ ctx[17].text + "";
     	let t;
@@ -34940,14 +34967,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(152:36) <CardText>",
+    		source: "(154:36) <CardText>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (141:32) <CardBody>
+    // (143:32) <CardBody>
     function create_default_slot_5(ctx) {
     	let cardsubtitle;
     	let t;
@@ -35020,14 +35047,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(141:32) <CardBody>",
+    		source: "(143:32) <CardBody>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (157:36) <Button on:click={toggle} value={intro._id}                                          >
+    // (159:36) <Button on:click={toggle} value={intro._id}                                          >
     function create_default_slot_4(ctx) {
     	let t;
 
@@ -35047,14 +35074,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(157:36) <Button on:click={toggle} value={intro._id}                                          >",
+    		source: "(159:36) <Button on:click={toggle} value={intro._id}                                          >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (156:32) <CardFooter>
+    // (158:32) <CardFooter>
     function create_default_slot_3$1(ctx) {
     	let button;
     	let t;
@@ -35148,14 +35175,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(156:32) <CardFooter>",
+    		source: "(158:32) <CardFooter>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (137:28) <Card class="mb-3">
+    // (139:28) <Card class="mb-3">
     function create_default_slot_2$1(ctx) {
     	let cardheader;
     	let t0;
@@ -35257,14 +35284,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(137:28) <Card class=\\\"mb-3\\\">",
+    		source: "(139:28) <Card class=\\\"mb-3\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (136:24) {#each result[name] as intro}
+    // (138:24) {#each result[name] as intro}
     function create_each_block_1(ctx) {
     	let card;
     	let current;
@@ -35313,23 +35340,25 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(136:24) {#each result[name] as intro}",
+    		source: "(138:24) {#each result[name] as intro}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (132:12) {#each Object.keys(result) as name}
+    // (127:12) {#each Object.keys(result) as name}
     function create_each_block(ctx) {
     	let div2;
     	let div0;
     	let t0_value = /*name*/ ctx[14] + "";
     	let t0;
     	let t1;
-    	let div1;
     	let t2;
+    	let div1;
+    	let t3;
     	let current;
+    	let if_block = /*viewMode*/ ctx[3] == 0 && create_if_block_1$1(ctx);
     	let each_value_1 = /*result*/ ctx[0][/*name*/ ctx[14]];
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
@@ -35348,36 +35377,63 @@ var app = (function () {
     			div0 = element("div");
     			t0 = text(t0_value);
     			t1 = space();
+    			if (if_block) if_block.c();
+    			t2 = space();
     			div1 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t2 = space();
+    			t3 = space();
     			attr_dev(div0, "class", "card-username svelte-1ayj6f9");
-    			add_location(div0, file$1, 133, 20, 4148);
+    			add_location(div0, file$1, 128, 20, 3971);
     			attr_dev(div1, "class", "scroll-item svelte-1ayj6f9");
-    			add_location(div1, file$1, 134, 20, 4209);
+    			add_location(div1, file$1, 136, 20, 4354);
     			attr_dev(div2, "class", "p-3 mb-3 bg-main marg svelte-1ayj6f9");
-    			add_location(div2, file$1, 132, 16, 4091);
+    			add_location(div2, file$1, 127, 16, 3914);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
     			append_dev(div2, div0);
     			append_dev(div0, t0);
     			append_dev(div2, t1);
+    			if (if_block) if_block.m(div2, null);
+    			append_dev(div2, t2);
     			append_dev(div2, div1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div1, null);
     			}
 
-    			append_dev(div2, t2);
+    			append_dev(div2, t3);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
     			if ((!current || dirty & /*result*/ 1) && t0_value !== (t0_value = /*name*/ ctx[14] + "")) set_data_dev(t0, t0_value);
+
+    			if (/*viewMode*/ ctx[3] == 0) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+
+    					if (dirty & /*viewMode*/ 8) {
+    						transition_in(if_block, 1);
+    					}
+    				} else {
+    					if_block = create_if_block_1$1(ctx);
+    					if_block.c();
+    					transition_in(if_block, 1);
+    					if_block.m(div2, t2);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+
+    				transition_out(if_block, 1, 1, () => {
+    					if_block = null;
+    				});
+
+    				check_outros();
+    			}
 
     			if (dirty & /*getData, result, Object, opens, toggle, Date*/ 51) {
     				each_value_1 = /*result*/ ctx[0][/*name*/ ctx[14]];
@@ -35409,6 +35465,7 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(if_block);
 
     			for (let i = 0; i < each_value_1.length; i += 1) {
     				transition_in(each_blocks[i]);
@@ -35417,6 +35474,7 @@ var app = (function () {
     			current = true;
     		},
     		o: function outro(local) {
+    			transition_out(if_block);
     			each_blocks = each_blocks.filter(Boolean);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -35427,6 +35485,7 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
+    			if (if_block) if_block.d();
     			destroy_each(each_blocks, detaching);
     		}
     	};
@@ -35435,7 +35494,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(132:12) {#each Object.keys(result) as name}",
+    		source: "(127:12) {#each Object.keys(result) as name}",
     		ctx
     	});
 
@@ -35448,11 +35507,11 @@ var app = (function () {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$1, create_if_block_1$1];
+    	const if_block_creators = [create_if_block$1, create_if_block_2];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*viewMode*/ ctx[3] == 0) return 0;
+    		if (/*viewMode*/ ctx[3] == 0 || /*viewMode*/ ctx[3] == 3) return 0;
     		if (/*viewMode*/ ctx[3] == 1) return 1;
     		return -1;
     	}
@@ -35625,7 +35684,7 @@ var app = (function () {
     	let t;
     	let row;
     	let current;
-    	let if_block = /*viewMode*/ ctx[3] == 3 && create_if_block_2(ctx);
+    	let if_block = /*viewMode*/ ctx[3] == 3 && create_if_block_3(ctx);
 
     	row = new Row({
     			props: {
@@ -35659,7 +35718,7 @@ var app = (function () {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block_2(ctx);
+    					if_block = create_if_block_3(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(t.parentNode, t);
