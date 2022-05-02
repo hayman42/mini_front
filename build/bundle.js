@@ -31736,7 +31736,7 @@ var app = (function () {
     	return block;
     }
 
-    // (239:8) {:else}
+    // (240:8) {:else}
     function create_else_block$1(ctx) {
     	let button;
     	let current;
@@ -31795,7 +31795,7 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(239:8) {:else}",
+    		source: "(240:8) {:else}",
     		ctx
     	});
 
@@ -32072,7 +32072,7 @@ var app = (function () {
     	return block;
     }
 
-    // (240:12) <Button                  class="like button"                  color="primary"                  on:click={isLike ? unLike(toggleLike) : doLike(toggleLike)}                  >
+    // (241:12) <Button                  class="like button"                  color="primary"                  on:click={isLike ? unLike(toggleLike) : doLike(toggleLike)}                  >
     function create_default_slot_11$2(ctx) {
     	let t0;
     	let t1;
@@ -32099,7 +32099,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$2.name,
     		type: "slot",
-    		source: "(240:12) <Button                  class=\\\"like button\\\"                  color=\\\"primary\\\"                  on:click={isLike ? unLike(toggleLike) : doLike(toggleLike)}                  >",
+    		source: "(241:12) <Button                  class=\\\"like button\\\"                  color=\\\"primary\\\"                  on:click={isLike ? unLike(toggleLike) : doLike(toggleLike)}                  >",
     		ctx
     	});
 
@@ -32162,8 +32162,11 @@ var app = (function () {
     	return block;
     }
 
-    // (217:47)                           {#each array as infoPromise}
+    // (217:47)                           {array}
     function create_then_block(ctx) {
+    	let t0_value = /*array*/ ctx[34] + "";
+    	let t0;
+    	let t1;
     	let each_1_anchor;
     	let current;
     	let each_value = /*array*/ ctx[34];
@@ -32180,6 +32183,9 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			t0 = text(t0_value);
+    			t1 = space();
+
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
@@ -32187,6 +32193,9 @@ var app = (function () {
     			each_1_anchor = empty();
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, t1, anchor);
+
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(target, anchor);
     			}
@@ -32242,6 +32251,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(t1);
     			destroy_each(each_blocks, detaching);
     			if (detaching) detach_dev(each_1_anchor);
     		}
@@ -32251,7 +32262,7 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(217:47)                           {#each array as infoPromise}",
+    		source: "(217:47)                           {array}",
     		ctx
     	});
 
@@ -32280,7 +32291,7 @@ var app = (function () {
     	return block;
     }
 
-    // (219:58)                                   <DropdownItem on:click={goTarget}
+    // (220:58)                                   <DropdownItem on:click={goTarget}
     function create_then_block_1(ctx) {
     	let dropdownitem;
     	let t;
@@ -32334,14 +32345,14 @@ var app = (function () {
     		block,
     		id: create_then_block_1.name,
     		type: "then",
-    		source: "(219:58)                                   <DropdownItem on:click={goTarget}",
+    		source: "(220:58)                                   <DropdownItem on:click={goTarget}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (220:32) <DropdownItem on:click={goTarget}                                      >
+    // (221:32) <DropdownItem on:click={goTarget}                                      >
     function create_default_slot_9$2(ctx) {
     	let t_value = /*name*/ ctx[38] + "";
     	let t;
@@ -32363,7 +32374,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$2.name,
     		type: "slot",
-    		source: "(220:32) <DropdownItem on:click={goTarget}                                      >",
+    		source: "(221:32) <DropdownItem on:click={goTarget}                                      >",
     		ctx
     	});
 
@@ -32392,7 +32403,7 @@ var app = (function () {
     	return block;
     }
 
-    // (218:24) {#each array as infoPromise}
+    // (219:24) {#each array as infoPromise}
     function create_each_block$1(ctx) {
     	let await_block_anchor;
     	let current;
@@ -32452,7 +32463,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(218:24) {#each array as infoPromise}",
+    		source: "(219:24) {#each array as infoPromise}",
     		ctx
     	});
 
@@ -32630,7 +32641,7 @@ var app = (function () {
     	return block;
     }
 
-    // (229:12) <Button                  class="remove button"                  color="secondary"                  on:click={modifyToggle}>
+    // (230:12) <Button                  class="remove button"                  color="secondary"                  on:click={modifyToggle}>
     function create_default_slot_6$2(ctx) {
     	let t;
 
@@ -32650,14 +32661,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$2.name,
     		type: "slot",
-    		source: "(229:12) <Button                  class=\\\"remove button\\\"                  color=\\\"secondary\\\"                  on:click={modifyToggle}>",
+    		source: "(230:12) <Button                  class=\\\"remove button\\\"                  color=\\\"secondary\\\"                  on:click={modifyToggle}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (234:12) <Button                  class="remove button"                  color="secondary"                  on:click={del(introduce, toggle)}>
+    // (235:12) <Button                  class="remove button"                  color="secondary"                  on:click={del(introduce, toggle)}>
     function create_default_slot_5$2(ctx) {
     	let t;
 
@@ -32677,7 +32688,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$2.name,
     		type: "slot",
-    		source: "(234:12) <Button                  class=\\\"remove button\\\"                  color=\\\"secondary\\\"                  on:click={del(introduce, toggle)}>",
+    		source: "(235:12) <Button                  class=\\\"remove button\\\"                  color=\\\"secondary\\\"                  on:click={del(introduce, toggle)}>",
     		ctx
     	});
 
