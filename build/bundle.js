@@ -31417,7 +31417,7 @@ var app = (function () {
     			h1 = element("h1");
     			t = text(/*title*/ ctx[7]);
     			attr_dev(h1, "class", "svelte-6llzvk");
-    			add_location(h1, file$3, 155, 12, 4504);
+    			add_location(h1, file$3, 155, 12, 4505);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -31452,7 +31452,7 @@ var app = (function () {
     		c: function create() {
     			textarea = element("textarea");
     			attr_dev(textarea, "class", "title");
-    			add_location(textarea, file$3, 153, 12, 4428);
+    			add_location(textarea, file$3, 153, 12, 4429);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -31549,9 +31549,9 @@ var app = (function () {
     			div = element("div");
     			textarea = element("textarea");
     			attr_dev(textarea, "class", "markdown-editor__source");
-    			add_location(textarea, file$3, 162, 20, 4736);
+    			add_location(textarea, file$3, 162, 20, 4737);
     			attr_dev(div, "class", "markdown-editor__left-panel");
-    			add_location(div, file$3, 161, 16, 4673);
+    			add_location(div, file$3, 161, 16, 4674);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -31605,11 +31605,11 @@ var app = (function () {
     			attr_dev(div0, "oncontextmenu", "return false");
     			attr_dev(div0, "ondragstart", "return false");
     			attr_dev(div0, "onselectstart", "return false");
-    			add_location(div0, file$3, 169, 16, 4986);
+    			add_location(div0, file$3, 169, 16, 4987);
     			attr_dev(div1, "class", "markdown-editor__right-panel");
-    			add_location(div1, file$3, 168, 12, 4926);
+    			add_location(div1, file$3, 168, 12, 4927);
     			attr_dev(div2, "class", "markdown-editor");
-    			add_location(div2, file$3, 159, 8, 4582);
+    			add_location(div2, file$3, 159, 8, 4583);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -32925,7 +32925,7 @@ var app = (function () {
     		}
 
     		if ($$self.$$.dirty[0] & /*introduce, isLike*/ 80) {
-    			$$invalidate(9, likeN = introduce.like_cnt + isLike);
+    			$$invalidate(9, likeN = introduce?.like_cnt + isLike);
     		}
     	};
 
