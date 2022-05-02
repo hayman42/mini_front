@@ -32162,7 +32162,7 @@ var app = (function () {
     	return block;
     }
 
-    // (217:47)                           {array}
+    // (217:49)                           {array}
     function create_then_block(ctx) {
     	let t0_value = /*array*/ ctx[34] + "";
     	let t0;
@@ -32262,7 +32262,7 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(217:47)                           {array}",
+    		source: "(217:49)                           {array}",
     		ctx
     	});
 
@@ -32509,7 +32509,7 @@ var app = (function () {
     		blocks: [,,,]
     	};
 
-    	handle_promise(/*promise*/ ctx[22], info);
+    	handle_promise(/*promise*/ ctx[22](), info);
 
     	const block = {
     		c: function create() {
