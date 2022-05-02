@@ -32162,7 +32162,7 @@ var app = (function () {
     	return block;
     }
 
-    // (215:58)                               <DropdownItem on:click={goTarget}
+    // (215:60)                               <DropdownItem on:click={goTarget}
     function create_then_block(ctx) {
     	let dropdownitem;
     	let t;
@@ -32216,7 +32216,7 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(215:58)                               <DropdownItem on:click={goTarget}",
+    		source: "(215:60)                               <DropdownItem on:click={goTarget}",
     		ctx
     	});
 
@@ -32294,7 +32294,7 @@ var app = (function () {
     		blocks: [,,,]
     	};
 
-    	handle_promise(promise = /*getInfo*/ ctx[12](/*person*/ ctx[33]), info);
+    	handle_promise(promise = /*getInfo*/ ctx[12](/*person*/ ctx[33])(), info);
 
     	const block = {
     		c: function create() {
@@ -32312,7 +32312,7 @@ var app = (function () {
     			ctx = new_ctx;
     			info.ctx = ctx;
 
-    			if (dirty[0] & /*introduce*/ 16 && promise !== (promise = /*getInfo*/ ctx[12](/*person*/ ctx[33])) && handle_promise(promise, info)) ; else {
+    			if (dirty[0] & /*introduce*/ 16 && promise !== (promise = /*getInfo*/ ctx[12](/*person*/ ctx[33])()) && handle_promise(promise, info)) ; else {
     				update_await_block_branch(info, ctx, dirty);
     			}
     		},
