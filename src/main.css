@@ -101,7 +101,7 @@ h5 {
     display: flex;
     flex-direction: column;
 }
-.toast{
+.toast {
     display: inline-block;
 }
 
@@ -114,3 +114,6 @@ h5 {
     margin: 15px;
 }
 
+.col-2 {
+    min-width: fit-content;
+}

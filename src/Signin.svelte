@@ -13,12 +13,15 @@
 
     export let isLoggedIn;
     export let serverMsg;
-
+    let userid;
+    let password;
+    let nickname;
+    let age;
+    let gender;
     const handleSignin = async () => {
-        const ids = ["signin_userid", "signin_password"];
-        const querys = ids.reduce((res, id) => {
-            const key = id.slice(7);
-            res[key] = document.getElementById(id).value;
+        const ids = ["userid", "password"];
+        const querys = ids.reduce((res, key) => {
+            res[key] = document.getElementById(key).value;
             return res;
         }, {});
         try {
@@ -39,17 +42,9 @@
     };
 
     async function handleSignup() {
-        const ids = [
-            "signup_userid",
-            "signup_password",
-            "signup_nickname",
-            "signup_age",
-            "signup_gender",
-        ];
-        const querys = ids.reduce((res, id) => {
-            const key = id.slice(7);
-            console.log(document.getElementById(id));
-            res[key] = document.getElementById(id).value;
+        const ids = ["userid", "password", "nickname", "age", "gender"];
+        const querys = ids.reduce((res, key) => {
+            res[key] = document.getElementById(key).value;
             return res;
         }, {});
         console.log(querys);
@@ -65,55 +60,59 @@
 </script>
 
 <TabContent>
-    <TabPane id="signin" tabId="signin" tab="Sign In" active>
+    <TabPane tabId="signin" tab="Sign In" active>
         <br />
         <InputGroup>
             <InputGroupText>ID</InputGroupText>
-            <Input id="signin_userid" placeholder="ID" required />
+            <Input id="loginid" bind:value={userid} placeholder="ID" />
         </InputGroup>
         <br />
         <InputGroup>
             <InputGroupText>Password</InputGroupText>
             <Input
-                id="signin_password"
+                id="loginpassword"
                 type="password"
+                bind:value={password}
                 placeholder="password"
-                required
             />
         </InputGroup>
         <br />
         <Button on:click={handleSignin}>로그인</Button>
     </TabPane>
-    <TabPane id="signup" tabId="signup" tab="Sign Up">
+    <TabPane tabId="signup" tab="Sign Up">
         <br />
         <InputGroup>
             <InputGroupText>ID</InputGroupText>
-            <Input id="signup_userid" placeholder="ID" required />
+            <Input id="userid" bind:value={userid} placeholder="ID" />
         </InputGroup>
         <br />
         <InputGroup>
             <InputGroupText>Password</InputGroupText>
             <Input
-                id="signup_password"
+                id="password"
+                bind:value={password}
                 type="password"
                 placeholder="password"
-                required
             />
         </InputGroup>
         <br />
         <InputGroup>
             <InputGroupText>nickname</InputGroupText>
-            <Input id="signup_nickname" placeholder="nicknname" required />
+            <Input
+                id="nickname"
+                placeholder="nicknname"
+                bind:value={nickname}
+            />
         </InputGroup>
         <br />
         <InputGroup>
             <InputGroupText>나이</InputGroupText>
-            <Input id="signup_age" placeholder="age" required />
+            <Input id="age" placeholder="age" bind:value={age} />
         </InputGroup>
         <br />
         <InputGroup>
             <InputGroupText>성별</InputGroupText>
-            <Input id="signup_gender" type="select" name="gender" required>
+            <Input type="select" name="gender" id="gender" bind:value={gender}>
                 <option>남자</option>
                 <option>여자</option>
             </Input>

@@ -14,10 +14,16 @@
     import { serverUrl, uid } from "./store";
     import axios from "axios";
     import qs from "qs";
+    export let func;
 
-    export const update = (introduce, func) => async () => {
-        const { title, text } = introduce;
-        console.log(introduce);
+    export let showModal = false;
+    export let createMode = false;
+    export let introduce;
+    export let keyword = "";
+    let title = "";
+    let text = "";
+    $: age = text + 123;
+    const update = (introduce, func) => async () => {
         const res = await axios.get(
             $serverUrl +
                 `/api/intro/update/${introduce._id}?` +
@@ -26,8 +32,7 @@
                     title,
                     text,
                 }),
-            { withCredentials: true },
-            { uid: $uid }
+            { withCredentials: true }
         );
         console.log(res);
         if (!res.data._id) return alert("수정 실패");
@@ -37,8 +42,7 @@
         func();
     };
 
-    export const create = (introduce, func) => async () => {
-        const { title, text } = introduce;
+    const create = (introduce, func) => async () => {
         const res = await axios.get(
             $serverUrl +
                 `/api/intro/create?` +
@@ -47,55 +51,64 @@
                     title,
                     text,
                 }),
-            { withCredentials: true },
-            { uid: $uid }
+            { withCredentials: true }
         );
+        console.log(res);
         if (!res.data == "ok") return alert("작성 실패");
         alert("작성 성공");
         func();
     };
 
-    export const del = (introduce, func) => async () => {
+    const del = (introduce, func) => async () => {
         const res = await axios.get(
-            $serverUrl + `/api/intro/delete/${introduce._id}`,
+            $serverUrl +
+                `/api/intro/delete/${introduce._id}?` +
+                qs.stringify({
+                    uid: $uid,
+                }),
             { withCredentials: true }
         );
-        if (!res.data == "ok") return alert("삭제 실패");
+        console.log(res);
+        if (res.data != "ok") return alert("삭제 실패");
         alert("삭제 성공");
         func();
     };
 
-    export const doLike = (introduce, func) => async () => {
+    const doLike = (func) => async () => {
+        console.log(introduce);
         const res = await axios.get(
             $serverUrl +
-                `/api/intro/like/${introduce._id}` +
+                `/api/intro/like/${introduce._id}?` +
                 qs.stringify({
                     uid: $uid,
                 }),
             { withCredentials: true }
         );
+        console.log(res);
         if (!res.data == "ok") return alert("잠시 후 다시 시도해주세요.");
         func();
     };
 
-    export const unLike = (introduce, func) => async () => {
+    const unLike = (func) => async () => {
+        console.log(introduce);
         const res = await axios.get(
             $serverUrl +
-                `/api/intro/unlike/${introduce._id}` +
+                `/api/intro/unlike/${introduce._id}?` +
                 qs.stringify({
                     uid: $uid,
                 }),
-            { withCredentials: true },
-            { uid: $uid }
+            { withCredentials: true }
         );
+        console.log(res);
         if (!res.data == "ok") return alert("잠시 후 다시 시도해주세요.");
         func();
     };
 
-    export let showModal = false;
-    export let createMode = false;
-    export let introduce;
-    let { title, text } = introduce;
+    console.log(introduce);
+    if (introduce) {
+        title = introduce.title;
+        text = introduce.text;
+    }
     let tempText = text;
     let tempTitle = title;
     $: source = marked(text);
@@ -126,18 +139,15 @@
         // console.log(uid);
         // uid = uid.substring(0, uid.length - 1);
         // console.log(uid);
-        if ($uid === introduce.user._id) isOwner = true;
-        console.log("from check user" + uid);
-        console.log(isOwner);
+        if (createMode || $uid === introduce.user._id) isOwner = true;
     };
-
     const goTarget = (e) => {
-        console.log(e.target.text);
+        keyword = e.target.text;
         showModal = !showModal;
     };
 </script>
 
-<Modal isOpen={showModal} on:open={resize} fullscreen {toggle}>
+<Modal isOpen={showModal} on:open={resize} on:close={func} fullscreen {toggle}>
     <ModalHeader {toggle}>
         {#if modifyMode | createMode}
             <textarea class="title" bind:value={title} />
@@ -210,9 +220,8 @@
             <Button
                 class="like button"
                 color="primary"
-                on:click={isLike
-                    ? unLike(introduce, toggleLike)
-                    : doLike(introduce, toggleLike)}>Like {likeN}</Button
+                on:click={isLike ? unLike(toggleLike) : doLike(toggleLike)}
+                >Like {likeN}</Button
             >
         {/if}
     </ModalFooter>

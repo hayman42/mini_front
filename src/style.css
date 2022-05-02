@@ -101,3 +101,36 @@ h5 {
     display: flex;
     flex-direction: column;
 }
+
+.row {
+    background-color: #e3dcd2;
+}
+
+.scroll-item {
+    display: flex;
+}
+
+.card {
+    min-width: 200px !important;
+    margin: 5px;
+}
+
+.card-username {
+    display: inline-block;
+    margin: 8px;
+}
+
+.bg-main {
+    margin: 10px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.col-2 {
+    min-width: fit-content;
+}
+
+.col-9 {
+    width: 75%;
+    max-width: fit-content;
+}

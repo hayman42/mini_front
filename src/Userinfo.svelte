@@ -1,5 +1,4 @@
 <script lang="ts">
-    import Alert from "./Alert.svelte";
     import {
         InputGroup,
         InputGroupText,
@@ -12,7 +11,6 @@
     import qs from "qs";
     import { serverUrl, uid } from "./store";
 
-    let serverMsg = "";
     let userid, nickname, age, gender;
     onMount(async () => {
         let info = (
@@ -37,12 +35,11 @@
             return res;
         }, {});
         querys["uid"] = $uid;
+        console.log(qs.stringify(querys));
         const res = await axios.get(
             $serverUrl + "/api/user/update?" + qs.stringify(querys),
             { withCredentials: true }
         );
-        if (res.data.success) serverMsg = "회원정보 수정 성공!";
-        else serverMsg = res.data.message;
     }
 </script>
 
@@ -82,7 +79,4 @@
         <br />
         <Button on:click={handleSubmit}>수정</Button>
     </Container>
-    {#if serverMsg != ""}
-        <Alert bind:serverMsg />
-    {/if}
 </div>
