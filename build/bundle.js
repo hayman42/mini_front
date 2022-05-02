@@ -31502,7 +31502,7 @@ var app = (function () {
     			h1 = element("h1");
     			t = text(/*title*/ ctx[7]);
     			attr_dev(h1, "class", "svelte-6llzvk");
-    			add_location(h1, file$3, 170, 12, 4955);
+    			add_location(h1, file$3, 170, 12, 4985);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -31537,7 +31537,7 @@ var app = (function () {
     		c: function create() {
     			textarea = element("textarea");
     			attr_dev(textarea, "class", "title");
-    			add_location(textarea, file$3, 168, 12, 4879);
+    			add_location(textarea, file$3, 168, 12, 4909);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, textarea, anchor);
@@ -31634,9 +31634,9 @@ var app = (function () {
     			div = element("div");
     			textarea = element("textarea");
     			attr_dev(textarea, "class", "markdown-editor__source");
-    			add_location(textarea, file$3, 177, 20, 5187);
+    			add_location(textarea, file$3, 177, 20, 5217);
     			attr_dev(div, "class", "markdown-editor__left-panel");
-    			add_location(div, file$3, 176, 16, 5124);
+    			add_location(div, file$3, 176, 16, 5154);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -31690,11 +31690,11 @@ var app = (function () {
     			attr_dev(div0, "oncontextmenu", "return false");
     			attr_dev(div0, "ondragstart", "return false");
     			attr_dev(div0, "onselectstart", "return false");
-    			add_location(div0, file$3, 184, 16, 5437);
+    			add_location(div0, file$3, 184, 16, 5467);
     			attr_dev(div1, "class", "markdown-editor__right-panel");
-    			add_location(div1, file$3, 183, 12, 5377);
+    			add_location(div1, file$3, 183, 12, 5407);
     			attr_dev(div2, "class", "markdown-editor");
-    			add_location(div2, file$3, 174, 8, 5033);
+    			add_location(div2, file$3, 174, 8, 5063);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -33108,7 +33108,7 @@ var app = (function () {
 
     	let tempText = text;
     	let tempTitle = title;
-    	let like_people;
+    	let like_people = introduce.like_people || [];
     	let { modifyMode = false } = $$props;
     	let isOwner = false;
     	let isLike = false;
